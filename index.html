@@ -3,301 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TEDx Pace Academy</title>
+    <title>TEDxPaceAcademy</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="aos.css">
     <link rel="icon" type="image/x-icon" href="TXLOGO.ico">
+    <style>
+        .myslide {
+            width:100%;
+            height:100%;
+            max-height:800px;
+            display:none;
+            object-fit: cover;
+            border-radius: 2.604vw;
+        }
+        .mydivs {
+            display: none;
+            border-radius: 2.604vw;
+        }
+        .monkey {
+            border-radius: 0px 0px 25px 0px;
+        }
+        .btnn {
+            height:5vh;
+            line-height: 30px;
+        }
+        body {
+            background-color: black;
+            font-family: Helvetica;
+        }
+        .okok {
+            height:60vh;
+            width:100%;
+            margin-top:20vh;
+            /*border:2px solid red;*/
+        }
+        @keyframes autoRotateAnimation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes otherRotation {
+            from {
+                transform: rotate(100deg);
+            }
+            to {
+                transform: rotate(410deg);
+            }
+        }
+        .autoRotate {
+            animation-name: autoRotateAnimation;
+            animation-timeline: view();
+            margin-bottom: -70vh;
+        }
+        .autoRotate2 {
+            animation-name: otherRotation;
+            animation-timeline: view();
+            float:right;
+            margin-top:10vh;
+            margin-right:25vh;
+            margin-bottom: -70vh;
+        }
+        @keyframes autobluranimation {
+            0% {
+                filter: blur(40px);
+            }
+            35%, 65%{
+                filter: blur(0);
+            }
+            100% {
+                filter: blur(40px);
+            }
+        }
+        .autoblur {
+            animation: autobluranimation linear both;
+            animation-timeline: view(20% auto);
+        }
+        .tx-red {
+            background-color:#EB0028;
+        }
+    </style>
 </head>
-<style>
-    .slideshow-container {
-        max-width: 1000px;
-        max-height: 500px;
-        position: relative;
-        margin: auto;
-    }
-
-    .mySlides {
-        display: none;
-        max-height:500px;
-    }
-
-    .prev, .next {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        width: auto;
-        margin-top: -22px;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 18px;
-        transition: 0.6s ease;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-    }
-
-    .next {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .prev:hover, .next:hover {
-        background-color: rgba(0,0,0,0.8);
-    }
-
-    .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        top:550px;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-    }
-
-    .dot {
-        cursor: pointer;
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-    d    display: inline-block;
-        transition: background-color 0.6s ease;
-    }
-
-    .active, .dot:hover {
-        background-color: #717171;
-    }
-
-    .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
-    }
-
-    .goat {
-        width:100%;
-        object-fit: cover;
-        max-height: 500px;
-    }
-
-    @keyframes fade {
-        from {opacity: .4}
-        to {opacity: 1}
-    }
-
-    .divel {
-        position: relative;
-        text-decoration: none;
-        color: white;
-        background-color: blue;
-        padding: 10px;
-        left: 0px;
-    }
-</style>
-<body style="background-color:black;font-family: Helvetica;">
-    <div style="position:fixed;">
-        <a class="divel" href="meettheteam.html">Meet the Team</a>
+<body>
+    <!--Navigation Bar-->
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+            <img src="TXLOGO.png" class="w3-bar-item" width="50px" height="50px">
+            <div class="w3-bar-item w3-mobile btnn" style="font-size: 25px;margin-left:-25px;"><strong>TEDxPaceAcademy</strong></div>
+            <div style="float:right;">
+            <a href="index.html" class="w3-bar-item w3-button w3-mobile btnn w3-hover-dark-grey tx-red">Home</a>
+            <a href="meettheteam.html" class="w3-bar-item w3-button w3-mobile btnn w3-hover-dark-grey">Meet the Team</a>
+            <a href="thisyrevent.html" class="w3-bar-item w3-button w3-mobile btnn w3-hover-dark-grey">This Year's Event</a>
+            <div class="w3-dropdown-hover w3-mobile" style="margin-right:2.604vw;">
+                <a class="w3-button btnn w3-hover-dark-grey">Past Events &darr;</a>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4" style="margin-right:2.604vw;">
+                    <a href="lwl.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Living With Love</a>
+                    <a href="did.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Do I Dare?</a>
+                    <a href="gbtg.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">The Game Behind the Game</a>
+                    <a href="fow.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">The Force of Words</a>
+                    <a href="csq.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Challenging the Status Quo</a>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
-    <header style="font-size:100px;color: #EB0028;text-align: center;">TEDx<span style="color:white;">PaceAcademy</span></header>
-    <h2 style="color:#EB0028;text-align: center;">As an Organization, TEDx is</h2>
-    <p style="color:white;text-align: center;">a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.
-    </p>
-    <h2 style="color:#EB0028;text-align: center;">At Pace Academy, in the fall of 2019,</h2>
-    <p style="color:white;text-align: center;">Michael Fu '21 approached his English teacher, Robert Kaufman, about the idea of potentially organizing a TEDx event at Pace Academy together. Neither Fu nor Kaufman knew what co-organizing TEDx entailed, but since both had an aspiration to put on a TEDx event to promote ideas worth spreading, they began planning the first TEDxPaceAcademy event for the spring of 2020. Covid-19 pushed the inaugural event entitled, "Challenging the Status Quo", to the spring of 2021. After the success of the first event, Kaufman began organizing the second TEDxPaceAcademy event ("The Force of Words") for the fall of 2021 with Emma Beth Neville '23 and Marit UyHam '23. Claire Jiang '25 and Davis Rice '23 co-organized the third event ("The Game Behind the Game") with Kaufman in the fall of 2022. And Martin Andra-Thomas '24, Harper Auchincloss '25, and Kate Grice '25 co-organized the fourth event ("Do I Dare?") in the fall of 2023. Thanks to extraordinary support from Fred Assaf, Chad Wabrek, Scott Sargent, Eric Forslund, and many others, TEDx has been able to continue improving and making a new program with different speakers each year.
-    </p>
+    <!--
+    <div class="w3-center w3-container okok"></div>
+    -->
+    <img src="puzzlepiece.png" class="autoRotate">
+    <img src="redpp.png" class="autoRotate2">
+    <div class="w3-center w3-container okok" data-aos="fade-up">
+        <h1 style="font-size:10vh;"><b><span style="color:red;">TEDx</span><span style="color:white;">PaceAcademy</span></b></h1>
+    </div>
+    <div class="w3-container w3-center" style="width:60vw;margin:auto;">
+        <h2 style="color:#EB0028;text-align:left;" class="autoblur">As an Organization, TEDx is...</h2>
+        <p style="color:white;text-align: left;" class="autoblur">a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.</p>
+        <h2 style="color:#EB0028;text-align: left;" class="autoblur">At Pace Academy, in the fall of 2019,</h2>
+        <p style="color:white;text-align: left;" class="autoblur">Michael Fu '21 approached his English teacher, Robert Kaufman, about the idea of potentially organizing a TEDx event at Pace Academy together. Neither Fu nor Kaufman knew what co-organizing TEDx entailed, but since both had an aspiration to put on a TEDx event to promote ideas worth spreading, they began planning the first TEDxPaceAcademy event for the spring of 2020. Covid-19 pushed the inaugural event entitled, "Challenging the Status Quo", to the spring of 2021. After the success of the first event, Kaufman began organizing the second TEDxPaceAcademy event ("The Force of Words") for the fall of 2021 with Emma Beth Neville '23 and Marit UyHam '23. Claire Jiang '25 and Davis Rice '23 co-organized the third event ("The Game Behind the Game") with Kaufman in the fall of 2022. And Martin Andra-Thomas '24, Harper Auchincloss '25, and Kate Grice '25 co-organized the fourth event ("Do I Dare?") in the fall of 2023. Thanks to extraordinary support from Fred Assaf, Chad Wabrek, Scott Sargent, Eric Forslund, and many others, TEDx has been able to continue improving and making a new program with different speakers each year.</p>
 
-    <br>
-
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 20</div>
-            <img src="allie.jpg" class="goat">
-            <div class="text">Allie Campbell delivers her part of the speech at the "Force of Words" talk</div>
+    </div>
+    <!--Slideshow-->
+    <br><br>
+    <div class="w3-content w3-display-container w3-center">
+        <div class="w3-display-container">
+            <img src="allie.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Allie Campbell delivers her part of the speech at the "Force of Words" talk</div>
         </div>
-    
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 20</div>
-            <img src="baggies.jpg" class="goat">
-            <div class="text">Emma Beth Neville prepares goodie bags ahead of the "Force of Words" event</div>
+        <div class="w3-display-container">
+            <img src="baggies.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Emma Beth Neville prepares goodie bags ahead of the "Force of Words" event</div>
         </div>
-    
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 20</div>
-            <img src="COOL.jpg" class="goat">
-            <div class="text">Pace Alum and renown photographer Kristi Odom delivers her speech at the "Force of Words" talk</div>
+        <div class="w3-display-container">
+            <img src="COOL.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Pace Alum and renown photographer Kristi Odom delivers her speech at the "Force of Words" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 20</div>
-            <img src="coolhair.jpg" class="goat">
-            <div class="text">Carlos Andrés Gómez delivers his speech at the "Challenging the Status Quo" talk</div>
+        <div class="w3-display-container">
+            <img src="coolhair.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Carlos Andrés Gómez delivers his speech at the "Challenging the Status Quo" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 20</div>
-            <img src="coveed.jpg" class="goat">
-            <div class="text">Group photo of the "Challenging the Status Quo" leaders and speakers after the event</div>
+        <div class="w3-display-container">
+            <img src="coveed.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Group photo of the "Challenging the Status Quo" leaders and speakers after the event</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">6 / 20</div>
-            <img src="dannyy.jpg" class="goat">
-            <div class="text">Former Heisman winner and NFL quarterback, Danny Weurffel, delivers his speech at the "Force of Words" talk</div>
+        <div class="w3-display-container">
+            <img src="dannyy.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Former Heisman winner and NFL quarterback, Danny Weurffel, delivers his speech at the "Force of Words" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">7 / 20</div>
-            <img src="forceowords.jpg" class="goat">
-            <div class="text">Group photo of the "Force of Words" leaders and speakers before the event</div>
+        <div class="w3-display-container">
+            <img src="forceowords.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Group photo of the "Force of Words" leaders and speakers before the event</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">8 / 20</div>
-            <img src="funtimes.jpg" class="goat">
-            <div class="text">TEDx committee members paint the banner in preparation for the "Game Behind the Game" event</div>
+        <div class="w3-display-container">
+            <img src="funtimes.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">TEDx committee members paint the banner in preparation for the "Game Behind the Game" event</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">9 / 20</div>
-            <img src="groupie.jpg" class="goat">
-            <div class="text">Group photo of the "Game Behind the Game" leaders and speakers after the event</div>
+        <div class="w3-display-container">
+            <img src="groupie.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Photo of the "Game Behind the Game" leaders and speakers</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">10 / 20</div>
-            <img src="happygeis.jpg" class="goat">
-            <div class="text">Emma Killian and Allie Campbell deliver their speech at the "Force of Words" talk</div>
+        <div class="w3-display-container">
+            <img src="happygeis.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Emma Killian and Allie Campbell deliver their speech at the "Force of Words" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">11 / 20</div>
-            <img src="HARDESTY.jpg" class="goat">
-            <div class="text">John Hardesty delivers his speech at the "Game Behind the Game" talk</div>
+        <div class="w3-display-container">
+            <img src="HARDESTY.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">John Hardesty delivers his speech at the "Game Behind the Game" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">12 / 20</div>
-            <img src="himothy.jpg" class="goat">
-            <div class="text">Davis Rice shows his process for coming up with a banner for the "Game Behind the Game" event</div>
+        <div class="w3-display-container">
+            <img src="himothy.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Davis Rice shows his process for coming up with a banner for the "Game Behind the Game" event</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">13 / 20</div>
-            <img src="kaufspeech.jpg" class="goat">
-            <div class="text">Faculty leader of TEDx, Robert Kaufman, kicks off the talk</div>
+        <div class="w3-display-container">
+            <img src="kaufspeech.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Faculty leader of TEDx, Robert Kaufman, kicks off the talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">14 / 20</div>
-            <img src="kiddos.jpg" class="goat">
-            <div class="text">Jayden Middleton and Ansley Kirbo introduce Leah Negero at the "Game Behind the Game" talk</div>
+        <div class="w3-display-container">
+            <img src="kiddos.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Jayden Middleton and Ansley Kirbo introduce Leah Negero at the "Game Behind the Game" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">15 / 20</div>
-            <img src="lockedin.jpg" class="goat">
-            <div class="text">Claire Jiang helps design a painting for the "Game Behind the Game" event</div>
+        <div class="w3-display-container">
+            <img src="lockedin.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Claire Jiang helps design a painting for the "Game Behind the Game" event</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">16 / 20</div>
-            <img src="massivegroup.jpg" class="goat">
-            <div class="text">Group photo of the "Do I Dare" leaders and speakers after the event</div>
+        <div class="w3-display-container">
+            <img src="massivegroup.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Group photo of the "Do I Dare" leaders and speakers after the event</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">17 / 20</div>
-            <img src="pastorbrown.jpg" class="goat">
-            <div class="text">Pace Faculty Member Joanne Beauvoir Brown delivers her speech at the "Force of Words" talk</div>
+        <div class="w3-display-container">
+            <img src="pastorbrown.jpg" class="myslide">
+            <div class="w3-display-bottommiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Pace Faculty Member Joanne Beauvoir Brown delivers her speech at the "Force of Words" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">18 / 20</div>
-            <img src="romero.jpg" class="goat">
-            <div class="text">Kate Romero delivers her speech at the "Force of Words" talk</div>
+        <div class="w3-display-container">
+            <img src="romero.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Kate Romero delivers her speech at the "Force of Words" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">19 / 20</div>
-            <img src="schiff.jpg" class="goat">
-            <div class="text">Pace Alum Drew Schiffer delivers his speech at the "Game Behind the Game" talk</div>
+        <div class="w3-display-container">
+            <img src="schiff.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Pace Alum Drew Schiffer delivers his speech at the "Game Behind the Game" talk</div>
         </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">20 / 20</div>
-            <img src="uyham.jpg" class="goat">
-            <div class="text">Marit UyHam introduces the speakers for the "Force of Words" talk</div>
+        <div class="w3-display-container">
+            <img src="uyham.jpg" class="myslide">
+            <div class="w3-display-topmiddle w3-container w3-padding-16 tx-red mydivs" style="color:white;">Marit UyHam introduces the speakers for the "Force of Words" talk</div>
         </div>
-    
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <button class="w3-button w3-display-left w3-black" onclick="changepic(-1)">&#10094;</button>
+        <button class="w3-button w3-display-right w3-black" onclick="changepic(1)">&#10095;</button>
+        <div class="w3-display-topleft w3-container w3-padding-16 w3-black monkey" id="currentslidenum">1 / 20</div>
     </div>
     <br>
-    
-    <div style="text-align:center" id="identifier">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-        <span class="dot" onclick="currentSlide(10)"></span>
-        <span class="dot" onclick="currentSlide(11)"></span>
-        <span class="dot" onclick="currentSlide(12)"></span>
-        <span class="dot" onclick="currentSlide(13)"></span>
-        <span class="dot" onclick="currentSlide(14)"></span>
-        <span class="dot" onclick="currentSlide(15)"></span>
-        <span class="dot" onclick="currentSlide(16)"></span>
-        <span class="dot" onclick="currentSlide(17)"></span>
-        <span class="dot" onclick="currentSlide(18)"></span>
-        <span class="dot" onclick="currentSlide(19)"></span>
-        <span class="dot" onclick="currentSlide(20)"></span>
-    </div>
     <br>
+    <script>
+        var slideindex = 1;
+        showpic(slideindex);
+
+        function changepic(num) {
+            slideindex += num;
+            showpic(slideindex);
+        }
+
+        function showpic(num) {
+            var i;
+            var imgs = document.getElementsByClassName("myslide");
+            var midivs = document.getElementsByClassName("mydivs");
+            if (num > imgs.length) {
+                slideindex = 1;
+            }
+            if (num < 1) {
+                slideindex = imgs.length;
+            }
+            for (i=0;i<imgs.length;i++) {
+                imgs[i].style.display = "none";
+                midivs[i].style.display = "none";
+            }
+            imgs[slideindex-1].style.display = "block";
+            midivs[slideindex-1].style.display = "block";
+
+            currentslidenum = document.getElementById("currentslidenum");
+            currentslidenum.innerHTML = slideindex + " / " + imgs.length;
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 2000,
+        });
+    </script>
 </body>
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-    }
-
-    function letithappen() {
-    let myid = document.getElementsByClassName("midiv");
-    myid.style.display = "block";
-    }
-
-</script>
 </html>
