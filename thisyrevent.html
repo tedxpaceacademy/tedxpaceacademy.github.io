@@ -108,7 +108,28 @@
         }
         .autohide {
             animation: autohideanimation both;
-            animation-timeline: view(auto auto);
+            animation-timeline: view(65% auto);
+        }
+        .sig1 {
+            color:white;
+            margin-left:-400px;
+            margin-top:0px;
+        }
+        .sig2 {
+            color:white;margin-left:550px;margin-top:-60px
+        }
+        .sig3 {
+            color:white;margin-left:650px
+        }
+        @media screen and (max-width: 1145px) {
+            .autohide {
+                display:none;
+            }
+            .sig1, .sig2, .sig3 {
+                display:block;
+                margin-left:0px;
+                margin-top:0px;
+            }
         }
     </style>
 </head>
@@ -147,15 +168,15 @@
     <br>
     <br>
     <div class="w3-center w3-container okok">
-        <h1 style="font-size:8vw;"><b><span style="color:#EB0028;">The Little Things</span></b></h1>
+        <h1 style="font-size:10vh;"><b><span style="color:#EB0028;">The Little Things</span></b></h1>
+        <h3 class="sig1">Date: TBA</h3>
+        <h3 class="sig2">Location: Pace Academy's Fine Arts Center (FAC)</h3>
+        <h4 class="sig3">966 W Paces Ferry Rd NW, Atlanta, GA 30327</h4>
     </div>
     <div class="w3-center w3-container">
-        <img src="legoblok.png" style="margin-top:-20px" class="autohide" width="90%">
-        <h3 style="color:white;margin-left:-250px;margin-top:-300px;">Date: TBA</h3>
-        <h3 style="color:white;margin-left:850px;margin-top:-60px">Location: Pace Academy's Fine Arts Center (FAC)</h3>
-        <h4 style="color:white;margin-left:950px">966 W Paces Ferry Rd NW, Atlanta, GA 30327</h4>
+        <img src="legoblok.png" style="margin-top:-125px" class="autohide">
     </div>
-    <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:15px">
+    <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:200px">
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     <br>
