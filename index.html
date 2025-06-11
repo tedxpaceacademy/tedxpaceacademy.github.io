@@ -55,8 +55,6 @@
             }
         }
         .autoRotate {
-            animation-name: autoRotateAnimation;
-            animation-timeline: view();
             margin-bottom: -70vh;
             width:40vw;
             margin-left:-10vw;
@@ -70,6 +68,20 @@
             margin-bottom: -70vh;
             width:40vw;
         }
+        @supports (animation-timeline: view()) {
+            .autoRotate {
+                animation-name: autoRotateAnimation;
+                animation-timeline: view();
+            }
+            .autoRotate2 {
+                animation-name: otherRotation;
+                animation-timeline: view();
+            }
+            .autoblur {
+                animation: autobluranimation linear both;
+                animation-timeline: view(20% auto);
+            }
+        }
         @keyframes autobluranimation {
             0% {
                 filter: blur(40px);
@@ -80,10 +92,6 @@
             100% {
                 filter: blur(40px);
             }
-        }
-        .autoblur {
-            animation: autobluranimation linear both;
-            animation-timeline: view(20% auto);
         }
         .tx-red {
             background-color:#EB0028;
