@@ -77,10 +77,12 @@
                 filter: blur(40px);
             }
         }
+        @supports (animation-timeline:view()) {
         .autoblur {
             animation: autobluranimation linear both;
             animation-timeline: view(20% auto);
         }
+    }
         .tx-red {
             background-color:#EB0028;
         }
