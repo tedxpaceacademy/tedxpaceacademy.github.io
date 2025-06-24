@@ -14,11 +14,11 @@
             max-height:800px;
             display:none;
             object-fit: cover;
-            border-radius: 2.604vw;
+            border-radius: 2.604vw 2.604vw 0 0;
         }
         .mydivs {
             display: none;
-            border-radius: 2.604vw;
+            border-radius: 0 0 2.604vw 2.604vw;
         }
         .monkey {
             border-radius: 0px 0px 25px 0px;
@@ -30,6 +30,7 @@
         body {
             background-color: black;
             font-family: Helvetica;
+            padding-top:5vh;
         }
         .okok {
             height:60vh;
@@ -39,10 +40,10 @@
         }
         @keyframes autoRotateAnimation {
             from {
-                transform: rotate(0deg);
+                transform: rotate(150deg);
             }
             to {
-                transform: rotate(360deg);
+                transform: rotate(720deg);
             }
         }
         @keyframes otherRotation {
@@ -54,31 +55,47 @@
             }
         }
         .autoRotate {
-            margin-bottom: -70vh;
-            width:40vw;
-            margin-left:-10vw;
+            /*margin-bottom: -70vh;*/
+            width:min(140px, 18vw);
+                /*margin-left:-300px;
+                margin-bottom:0vh;
+                position: absolute;
+                margin-top: -100px;*/
+                position: absolute;
+                transform: rotate(150deg);
+                left:-40vw;
+                right:0;
+                top:0vh;
+                margin:auto;
         }
         .autoRotate2 {
-            animation-name: otherRotation;
-            animation-timeline: view();
-            float:right;
-            margin-top:15vh;
-            margin-right:2vh;
-            margin-bottom: -70vh;
-            width:40vw;
+            /*float:right;
+            /*margin-top:15vh;
+            /*margin-right:2vh;
+            margin-bottom: -70vh;*/
+            transform: rotate(30deg);
+            width:min(200px, 25vw);
+            position: absolute;
+            /*margin-right:-350px;
+            margin-top:-100px;*/
+            top:-3vh;
+            left:33vw;
+            right:0;
+            margin:auto;
+            
         }
         @supports (animation-timeline: view()) {
             .autoRotate {
                 animation-name: autoRotateAnimation;
-                animation-timeline: view();
+                animation-timeline: view(auto 80%);
             }
             .autoRotate2 {
                 animation-name: otherRotation;
-                animation-timeline: view();
+                animation-timeline: view(auto 70%);
             }
             .autoblur {
                 animation: autobluranimation linear both;
-                animation-timeline: view(20% auto);
+                animation-timeline: view(auto 20%);
             }
         }
         @keyframes autobluranimation {
@@ -95,68 +112,75 @@
         .tx-red {
             background-color:#EB0028;
         }
-        body :not(.bruh) {
-            filter: blur(4px);
+        #demo a {
+            font-size: 2.7vw;
         }
-
     </style>
 </head>
 <body>
     <!--Navigation Bar-->
     <div class="w3-top">
-        <div class="w3-bar w3-black">
+        <div class="w3-bar w3-black" style="border-bottom: 2px solid red">
             <img src="TXLOGO.png" class="w3-bar-item" width="50px" height="50px">
-            <div class="w3-bar-item btnn" style="font-size: 25px;margin-left:-25px;"><strong>TEDxPaceAcademy</strong></div>
-            <div>
+            <div class="w3-bar-item btnn" style="font-size: min(4vw, 36px);margin-left:-25px;"><strong id="sigmaa">TEDxPaceAcademy</strong></div>
+            <a onclick="freaky()" class="w3-right w3-bar-item btnn w3-button w3-hover-dark-grey w3-hide-large">&#9776;</a>
+            <div class="w3-right">
             <a href="index.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey tx-red">Home</a>
             <a href="meettheteam.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-hide-small w3-hide-medium">Meet the Team</a>
             <a href="thisyrevent.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-hide-small w3-hide-medium">This Year's Event</a>
             <div class="w3-dropdown-click w3-hide-small w3-hide-medium" style="margin-right:50px;">
                 <a onclick="myContFunc()" class="w3-button btnn w3-hover-dark-grey">Past Events &darr;</a>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4" id="mycontent">
-                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Living With Love</a>
-                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Do I Dare?</a>
-                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">The Game Behind the Game</a>
-                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">The Force of Words</a>
-                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Challenging the Status Quo</a>
+                <div class="w3-dropdown-content w3-center w3-bar-block w3-card-4" id="mycontent" style="color:white;border: 2px solid red;border-radius:0px 0px 0px 50px;border-top:none;border-right:none">
+                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Living With Love</a>
+                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Do I Dare?</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Game Behind the Game</a>
+                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Force of Words</a>
+                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;border-radius:0px 0px 0px 50px;">Challenging the Status Quo</a>
                 </div>
             </div>
             </div>
-            <a onclick="freaky()" class="w3-bar-item btnn w3-button w3-right w3-hover-dark-grey w3-hide-large">&#9776;</a>
         </div>
-        <div id="demo" style="background-color: black" class="w3-hide w3-bar-block w3-hide-large">
-            <a href="meettheteam.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey" style="color:white">Meet the Team</a>
-            <a href="thisyrevent.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey" style="color:white">This Year's Event</a>
-                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn" style="color:white">Living With Love (Past Event)</a>
-                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn" style="color:white">Do I Dare? (Past Event)</a>
-                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn" style="color:white">The Game Behind the Game (Past Event)</a>
-                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn" style="color:white">The Force of Words (Past Event)</a>
-                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn" style="color:white">Challenging the Status Quo (Past Event)</a>
+        <div id="demo" style="background-color: black;margin-left:20vw;margin-right:20vw;border:2px solid red;border-radius:0px 0px 50px 50px;border-top:none" class="w3-hide w3-bar-block w3-hide-large">
+            <a href="meettheteam.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-center" style="color:white">Meet the Team</a>
+            <a href="thisyrevent.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-center" style="color:white">This Year's Event</a>
+                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">Living With Love (Past Event)</a>
+                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">Do I Dare? (Past Event)</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">The Game Behind the Game (Past Event)</a>
+                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">The Force of Words (Past Event)</a>
+                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white;border-radius:0px 0px 50px 50px">Challenging the Status Quo (Past Event)</a>
         </div>
     </div>
     <!--
     <div class="w3-center w3-container okok"></div>
 -->
-    <div style="height:10vh;background-color: black;"></div>
-    <img src="puzzlepiece.png" class="autoRotate">
-    <img src="redpp.png" class="autoRotate2">
-    <div class="w3-center w3-container" data-aos="fade-up">
-        <h1 style="font-size:50px;"><b><span style="color:red;">TEDx</span><span style="color:white;">PaceAcademy</span></b></h1>
+    <div style="height:10vh;background-color: black"></div>
+    <div class="w3-center w3-container" data-aos="fade-up" style="position:relative">
+        <h1 style="font-size:50px;position: relative;z-index: 50;"><b><span style="color:red;">TEDx</span><span style="color:white;" id="changeme">PaceAcademy</span></b></h1>
+        <img src="puzzlepiece.png" class="autoRotate">
+        <img src="redpp.png" class="autoRotate2">
     </div>
-    <div class="w3-container w3-center" style="width:60vw;margin-left:auto;margin-right:auto;margin-top:20vh">
-        <h2 style="color:#EB0028;text-align:left;" class="autoblur">As an Organization, TEDx is...</h2>
-        <p style="color:white;text-align: left;" class="autoblur">a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.</p>
-        <h2 style="color:#EB0028;text-align: left;" class="autoblur">At Pace Academy, in the fall of 2019,</h2>
-        <p style="color:white;text-align: left;" class="autoblur">Michael Fu '21 approached his English teacher, Robert Kaufman, about the idea of potentially organizing a TEDx event at Pace Academy together. Neither Fu nor Kaufman knew what co-organizing TEDx entailed, but since both had an aspiration to put on a TEDx event to promote ideas worth spreading, they began planning the first TEDxPaceAcademy event for the spring of 2020. Covid-19 pushed the inaugural event entitled, "Challenging the Status Quo", to the spring of 2021. After the success of the first event, Kaufman began organizing the second TEDxPaceAcademy event ("The Force of Words") for the fall of 2021 with Emma Beth Neville '23 and Marit UyHam '23. Claire Jiang '25 and Davis Rice '23 co-organized the third event ("The Game Behind the Game") with Kaufman in the fall of 2022. And Martin Andra-Thomas '24, Harper Auchincloss '25, and Kate Grice '25 co-organized the fourth event ("Do I Dare?") in the fall of 2023. Thanks to extraordinary support from Fred Assaf, Chad Wabrek, Scott Sargent, Eric Forslund, and many others, TEDx has been able to continue improving and making a new program with different speakers each year.</p>
+        <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:2vh">
+        <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
+    </div>
+    <div id="sigbeat" class="w3-container w3-center" style="width:60vw;margin-left:auto;margin-right:auto;z-index:99">
 
+        <h2 style="color:#EB0028;text-align:left;margin-bottom:5vh;margin-top:5vh" class="autoblur">As an Organization, TEDx is...</h2>
+        <p style="color:white;text-align: left;margin-bottom:5vh" class="autoblur">a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.</p>
+        <h2 style="color:#EB0028;text-align: left;margin-bottom:5vh" class="autoblur">At Pace Academy, in the fall of 2019,</h2>
+        <p style="color:white;text-align: left;margin-bottom:5vh" class="autoblur">Michael Fu '21 approached his English teacher, Robert Kaufman, about the idea of potentially organizing a TEDx event at Pace Academy together. Neither Fu nor Kaufman knew what co-organizing TEDx entailed, but since both had an aspiration to put on a TEDx event to promote ideas worth spreading, they began planning the first TEDxPaceAcademy event for the spring of 2020. Covid-19 pushed the inaugural event entitled, "Challenging the Status Quo", to the spring of 2021. After the success of the first event, Kaufman began organizing the second TEDxPaceAcademy event ("The Force of Words") for the fall of 2021 with Emma Beth Neville '23 and Marit UyHam '23. Claire Jiang '25 and Davis Rice '23 co-organized the third event ("The Game Behind the Game") with Kaufman in the fall of 2022. And Martin Andra-Thomas '24, Harper Auchincloss '25, and Kate Grice '25 co-organized the fourth event ("Do I Dare?") in the fall of 2023. Thanks to extraordinary support from Fred Assaf, Chad Wabrek, Scott Sargent, Eric Forslund, and many others, TEDx has been able to continue improving and making a new program with different speakers each year.</p>
+
+    </div>
+    <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:2vh">
+        <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     <!--Slideshow-->
     <br><br>
-    <div class="w3-content w3-display-container w3-center">
+    <div class="w3-content w3-display-container w3-center" style="width:100%;">
         <div class="w3-display-container">
             <img src="allie.jpg" class="myslide">
+            <div class="w3-container w3-padding-16 tx-red mydivs" style="color:white">Allie Campbell delivers her speech at the "Force of Words"</div>
         </div>
-        <div class="w3-container w3-padding-16 tx-red mydivs" style="color:white;">Allie Campbell delivers her speech at the "Force of Words"</div>
+        
         <div class="w3-display-container">
             <img src="baggies.jpg" class="myslide">
         </div>
@@ -232,21 +256,13 @@
         <div class="w3-display-container">
             <img src="uyham.jpg" class="myslide">
         </div>
-        <div class="w3-container w3-padding-16 tx-red mydivs" style="color:white">Marit UyHam introduces the speakers for the "Force of Words" talk</div>
-        <button class="w3-button w3-display-left w3-black" onclick="changepic(-1)">&#10094;</button>
-        <button class="w3-button w3-display-right w3-black" onclick="changepic(1)">&#10095;</button>
+        <div class="w3-container w3-padding-16 tx-red mydivs" style="color:white;">Marit UyHam introduces the speakers for the "Force of Words" talk</div>
+        <button class="w3-button w3-display-left w3-black" style="height:50%;opacity: 0.5;border-radius: 0 2.604vw 2.604vw 0;" onclick="changepic(-1)">&#10094;</button>
+        <button style="height:50%;opacity: 0.5;border-radius:2.604vw 0 0 2.604vw" class="w3-button w3-display-right w3-black" onclick="changepic(1)">&#10095;</button>
         <div class="w3-display-topleft w3-container w3-padding-16 w3-black monkey" id="currentslidenum">1 / 20</div>
     </div>
     <br>
     <br>
-    <div class="bruh w3-panel w3-red w3-display-container" style="width:300px;height:190px;background-color:green;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index:1;">
-        <span onclick="switchplace(this)" class="w3-button w3-display-topright w3-large bruh">&times;</span>
-        <h3 class="bruh">ATTENTION</h3>
-        <p class="bruh">Would you like to switch over to the computer-optimized version of this website?</p>
-        <div class="w3-center bruh">
-        <a href="compindex.html" class="bruh w3-button w3-white">Computer Version</a>
-        </div>
-    </div>
     <script>
         var slideindex = 1;
         showpic(slideindex);
@@ -276,14 +292,6 @@
             currentslidenum = document.getElementById("currentslidenum");
             currentslidenum.innerHTML = slideindex + " / " + imgs.length;
         }
-
-        function switchplace(el) {
-            el.parentElement.style.display='none';
-            bruhh = document.body.getElementsByTagName("*");
-            for (var i = 0;i < bruhh.length; i++) {
-            bruhh[i].classList.add("bruh");}
-            //.classList.add("bruh");
-        }
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="aos.js"></script>
@@ -312,6 +320,26 @@
                 otrostuff.className = otrostuff.className.replace(" w3-show", "");
             }
         }
+        function changeJ(listt) {
+            if (listt.matches){
+                document.getElementById("changeme").innerHTML = "PA";
+                
+                document.getElementById("sigmaa").innerHTML = "";
+            }
+            else {
+                document.getElementById("changeme").innerHTML = "PaceAcademy";
+                document.getElementById("sigmaa").innerHTML = "TEDxPaceAcademy";
+            }}
+
+        xx = window.matchMedia("(max-width:700px)");
+
+        changeJ(xx);
+
+        xx.addEventListener("change", function() {
+            changeJ(xx);
+        });
+
+
     </script>
 </body>
 </html>

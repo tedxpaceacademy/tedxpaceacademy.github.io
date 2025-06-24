@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="aos.css">
     <link rel="icon" type="image/x-icon" href="TXLOGO.ico">
     <style>
+        #demo a {
+            font-size: 2.7vw;
+        }
         .myslide {
             width:100%;
             height:100%;
@@ -29,7 +32,7 @@
         body {
             background-color: black;
             font-family: Helvetica;
-            padding-top:20vh;
+            
         }
         .okok {
             height:60vh;
@@ -57,6 +60,7 @@
             animation-name: autoRotateAnimation;
             animation-timeline: view();
             margin-bottom: -70vh;
+            transform: rotate(-30deg);
         }
         .autoRotate2 {
             animation-name: otherRotation;
@@ -65,6 +69,7 @@
             margin-top:15vh;
             margin-right:5vh;
             margin-bottom: -70vh;
+            transform: rotate(20deg);
         }
         @keyframes autobluranimation {
             0% {
@@ -100,52 +105,80 @@
         }
         .checkers {
             gap:8px;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 600px) {
+            .checkers {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (min-width: 900px) {
+            .checkers {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <!--Navigation Bar-->
     <div class="w3-top">
-        <div class="w3-bar w3-black">
+        <div class="w3-bar w3-black" style="border-bottom: 2px solid red">
             <img src="TXLOGO.png" class="w3-bar-item" width="50px" height="50px">
-            <div class="w3-bar-item w3-mobile btnn" style="font-size: 25px;margin-left:-25px;"><strong>TEDxPaceAcademy</strong></div>
-            <div>
-            <a href="index.html" class="w3-bar-item w3-button w3-mobile btnn w3-hover-dark-grey">Home</a>
-            <a href="meettheteam.html" class="w3-bar-item w3-button w3-mobile btnn w3-hover-dark-grey tx-red">Meet the Team</a>
-            <a href="thisyrevent.html" class="w3-bar-item w3-button w3-mobile btnn w3-hover-dark-grey">This Year's Event</a>
-            <div class="w3-dropdown-click w3-mobile" style="margin-right:50px;">
+            <div class="w3-bar-item btnn" style="font-size: min(3.5vw, 36px);margin-left:-25px;"><strong id="sigmaa">TEDxPaceAcademy</strong></div>
+            <a onclick="freaky()" class="w3-right w3-bar-item btnn w3-button w3-hover-dark-grey w3-hide-large">&#9776;</a>
+            <div class="w3-right">
+            <a href="index.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-hide-small w3-hide-medium">Home</a>
+            <a href="meettheteam.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey tx-red">Meet the Team</a>
+            <a href="thisyrevent.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-hide-small w3-hide-medium">This Year's Event</a>
+            <div class="w3-dropdown-click w3-hide-small w3-hide-medium" style="margin-right:50px;">
                 <a onclick="myContFunc()" class="w3-button btnn w3-hover-dark-grey">Past Events &darr;</a>
-                <div class="w3-dropdown-content w3-bar-block w3-card-4" id="mycontent">
-                    <a href="lwl.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Living With Love</a>
-                    <a href="did.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Do I Dare?</a>
-                    <a href="gbtg.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">The Game Behind the Game</a>
-                    <a href="fow.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">The Force of Words</a>
-                    <a href="csq.html" class="w3-mobile w3-button w3-bar-item w3-hover-dark-grey" style="background-color: darkgray;">Challenging the Status Quo</a>
+                <div class="w3-dropdown-content w3-center w3-bar-block w3-card-4" id="mycontent" style="color:white;border: 2px solid red;border-radius:0px 0px 0px 50px;border-top:none;border-right:none">
+                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Living With Love</a>
+                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Do I Dare?</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Game Behind the Game</a>
+                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Force of Words</a>
+                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;border-radius:0px 0px 0px 50px;">Challenging the Status Quo</a>
                 </div>
             </div>
             </div>
+        </div>
+        <div id="demo" style="background-color: black;margin-left:20vw;margin-right:20vw;border:2px solid red;border-radius:0px 0px 50px 50px;border-top:none" class="w3-hide w3-bar-block w3-hide-large">
+            <a href="index.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-center" style="color:white">Home</a>
+            <a href="thisyrevent.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-center" style="color:white">This Year's Event</a>
+                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">Living With Love (Past Event)</a>
+                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">Do I Dare? (Past Event)</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">The Game Behind the Game (Past Event)</a>
+                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">The Force of Words (Past Event)</a>
+                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white;border-radius:0px 0px 50px 50px">Challenging the Status Quo (Past Event)</a>
         </div>
     </div>
     <!--
     <div class="w3-center w3-container okok"></div>
     -->
 
-    <img src="teamphoto.jpg" class="autoRotate" style="width:40vw;">
-    <img src="teamphoto2.jpg" class="autoRotate2" style="width:40vw;">
-    <div class="w3-center w3-container okok" data-aos="fade-down">
-        <h1 style="font-size:10vw;"><b><span style="color:white;">Meet</span><span style="color:red;"> the </span><span style="color:white">Team</span></b></h1>
+    <img src="teamphoto.jpg" class="autoRotate" style="width:30vw;">
+    <img src="teamphoto2.jpg" class="autoRotate2" style="width:30vw;">
+    
+    <div class="w3-center w3-container" data-aos="fade-down" style="width:100%;margin-top:20vh;margin-bottom:10vh">
+        <h1 style="font-size:min(10vw, 70px);"><b><span style="color:white;">Meet</span><span style="color:red;"> the </span><span style="color:white">Team</span></b></h1>
+    </div>
+    <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:20vh">
+        <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     <div class="w3-container w3-center" style="width:60vw;margin:auto;">
-        <h2 style="color:#EB0028;text-align:center;font-size:10vw" class="autoshow">The Executive Team</h2>
+        <h2 style="color:#EB0028;text-align:center;font-size:min(10vw,50px)" class="autoshow">The Executive Team</h2>
     </div>
+    
     <div class="w3-grid checkers">
         <div class="w3-padding w3-card autoshow"><img src="kaufman.jpg" width="100%"><div class="w3-container w3-center" style="margin:auto"><h1 style="color:#EB0028">Robert Kaufman</h1><h2 style="color:white">Co-Organizer</h2></div></div>
         <div class="w3-padding w3-card autoshow"><img src="gus.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Gus Loomis '28</h1><h2 style="color:white">Co-Organizer</h2></div></div>
         <div class="w3-padding w3-card autoshow"><img src="eloise.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Eloise McDonald '27</h1><h2 style="color:white">Co-Organizer</h2></div></div>
     </div>
+    <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:2vh">
+        <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
+    </div>
     <div class="w3-container w3-center" style="width:60vw;margin:auto;">
-        <h2 style="color:#EB0028;text-align:center;font-size:10vw" class="autoshow">The Committee</h2>
+        <h2 style="color:#EB0028;text-align:center;font-size:min(10vw, 50px);margin-top: 10vh" class="autoshow">The Committee</h2>
     </div>
     <div class="w3-grid checkers w3-center">
         <div class="w3-padding w3-card autoshow w3-center"><img src="braylon.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Braylon Cambor '26</h1><h2 style="color:white">Team Member</h2></div></div>
@@ -170,6 +203,9 @@
     </div>
     </div>
     </div>
+    </div>
+    <div class="w3-center w3-container" style="margin-left:150px;margin-right:150px;margin-top:2vh">
+        <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     <div class="w3-container w3-center" style="width:60vw;margin:auto;">
         <h6 style="color:#EB0028;text-align:center;font-size:45px">Not Pictured</h6>
@@ -226,6 +262,33 @@
                 mystuff.className = mystuff.className.replace(" w3-show", "");
             }
         }
+    </script>
+    <script>
+        function freaky() {
+            var mybruzz = document.getElementById("demo");
+            if (mybruzz.className.indexOf("w3-show") == -1) {
+                mybruzz.className += " w3-show";
+            }
+            else {
+                mybruzz.className = mybruzz.className.replace(" w3-show", "");
+            }
+        }
+        function changeJ(listt) {
+            if (listt.matches){
+                
+                document.getElementById("sigmaa").innerHTML = "";
+            }
+            else {
+                document.getElementById("sigmaa").innerHTML = "TEDxPaceAcademy";
+            }}
+
+        xx = window.matchMedia("(max-width:700px)");
+
+        changeJ(xx);
+
+        xx.addEventListener("change", function() {
+            changeJ(xx);
+        });
     </script>
 </body>
 </html>
