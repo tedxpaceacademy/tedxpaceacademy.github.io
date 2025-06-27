@@ -207,7 +207,7 @@
     </div>
     <div class="w3-display-container">
     <div style="display:flex;justify-content: center;" data-aos="flip-down" class="autoshow">
-    <button onclick="goes()" style="color:#EB0028;background-color: black;border-radius:25px" class="w3-center w3-button">Change Layout</button></div>
+    <button onclick="goes()" style="color:white;border-radius:25px" class="w3-center w3-button tx-red">Change Layout</button></div>
     <div class="w3-grid checkers" id="otroexample" style="width:80vw;margin-left:auto;margin-right:auto;position:relative;z-index:-1">
         <div class="w3-padding w3-card autoshow example" data-aos="zoom-in"><img src="kaufman.jpg" width="100%"><div class="w3-container w3-center" style="margin:auto"><h1 style="color:#EB0028">Robert Kaufman</h1><h2 style="color:white">Co-Organizer</h2></div></div>
         <div class="w3-padding w3-card autoshow example" data-aos="zoom-in"><img src="gus.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Gus Loomis '28</h1><h2 style="color:white">Co-Organizer</h2></div></div>
@@ -224,7 +224,7 @@
     </div>
     <div class="w3-display-container">
         <div style="display: flex;justify-content: center;" data-aos="flip-down" class="autoshow">
-            <button onclick="goes2()" style="color:#EB0028;background-color: black;border-radius:25px" class="w3-center w3-button">Change Layout</button></div>
+            <button onclick="goes2()" style="color:white;border-radius:25px" class="w3-center w3-button tx-red">Change Layout</button></div>
     <div class="w3-grid checkers" id="otroexample2" style="width:80vw;margin-left:auto;margin-right:auto;position: relative;z-index: -1;">
         <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="masonman.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Mason Pinkerton '28</h1><h4 style="color:white">Website Developer/Manager | Creative Director</h4></div></div>
         <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="braylon.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Braylon Cambor '26</h1><h2 style="color:white">Team Member</h2></div></div>
@@ -283,12 +283,12 @@
             console.log(window.isSS);
             if (window.isSS) {
                 window.isSS = false;
-                var bums = document.getElementsByClassName("example");
+                bums = document.getElementsByClassName("example");
                 Array.from(bums).forEach(element => {
                     element.classList.remove("bum");
                     element.style.display="block";
                 });
-                var booms = document.getElementsByClassName("boom");
+                booms = document.getElementsByClassName("boom");
                 Array.from(booms).forEach(element => {
                     element.classList.add("w3-hide");
                 });
@@ -299,22 +299,22 @@
             } else {
                 window.isSS = true;
                 
-                var bums = document.getElementsByClassName("example");
+                bums = document.getElementsByClassName("example");
                 Array.from(bums).forEach(element => {
                     element.classList.add("bum");
                 });
-                var booms = document.getElementsByClassName("boom");
+                booms = document.getElementsByClassName("boom");
                 Array.from(booms).forEach(element => {
                     element.classList.remove("w3-hide");
                 });
-                var slideindex = 1;
+                slideindex = 1;
                 showpic(slideindex);
                 document.getElementById("otroexample").classList.remove("checkers");
                 document.getElementById("otroexample").classList.add("checkers2");
             }
         }
 
-        var slideindex = 1;
+        slideindex = 1;
         showpic(slideindex);
 
         function changepic(num) {
@@ -324,9 +324,9 @@
 
         function showpic(num) {
             var i;
-            var imgs = document.getElementsByClassName("bum");
+            imgs = document.getElementsByClassName("bum");
             console.log(imgs.length);
-            var midivs = document.getElementsByClassName("mydivs");
+            midivs = document.getElementsByClassName("mydivs");
             if (num > imgs.length) {
                 slideindex = 1;
             }
@@ -351,12 +351,12 @@
             console.log(window.isSS2);
             if (window.isSS2) {
                 window.isSS2 = false;
-                var bums2 = document.getElementsByClassName("example2");
+                bums2 = document.getElementsByClassName("example2");
                 Array.from(bums2).forEach(element => {
                     element.classList.remove("bum2");
                     element.style.display="block";
                 });
-                var booms2 = document.getElementsByClassName("boom2");
+                booms2 = document.getElementsByClassName("boom2");
                 Array.from(booms2).forEach(element => {
                     element.classList.add("w3-hide");
                 });
@@ -367,11 +367,11 @@
             } else {
                 window.isSS2 = true;
                 
-                var bums2 = document.getElementsByClassName("example2");
+                bums2 = document.getElementsByClassName("example2");
                 Array.from(bums2).forEach(element => {
                     element.classList.add("bum2");
                 });
-                var booms2 = document.getElementsByClassName("boom2");
+                booms2 = document.getElementsByClassName("boom2");
                 Array.from(booms2).forEach(element => {
                     element.classList.remove("w3-hide");
                 });
@@ -392,9 +392,9 @@
 
         function showpic2(num2) {
             var i2;
-            var imgs2 = document.getElementsByClassName("bum2");
+            imgs2 = document.getElementsByClassName("bum2");
             console.log(imgs2.length);
-            var midivs2 = document.getElementsByClassName("mydivs2");
+            midivs2 = document.getElementsByClassName("mydivs2");
             if (num2 > imgs2.length) {
                 slideindex2 = 1;
             }
