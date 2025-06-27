@@ -13,11 +13,11 @@
             font-size: 2.7vw;
         }
         .myslide {
-            width:100%;
+            /*width:100%;
             height:100%;
-            max-height:800px;
+            max-height:800px;*/
             display:none;
-            object-fit: cover;
+            /*object-fit: cover;*/
         }
         .mydivs {
             display: none;
@@ -139,6 +139,20 @@
                 grid-template-columns: 1fr 1fr 1fr;
             }
         }
+        .bum {
+            display: none;
+        }
+        .bum2 {
+            display: none;
+        }
+        .gyat:hover {
+            background-color: #EB0028;
+        }
+        .checkers2 {
+            gap:8px;
+            grid-template-columns: 50vw;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -191,11 +205,16 @@
     <div class="w3-container w3-center" style="width:60vw;margin:auto;">
         <h2 style="color:#EB0028;text-align:center;font-size:min(10vw,50px);position:relative" class="autoshow" data-aos="flip-down">The Executive Team</h2>
     </div>
-    
-    <div class="w3-grid checkers" style="width:80vw;margin-left:auto;margin-right:auto;position:relative;z-index:-1">
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="kaufman.jpg" width="100%"><div class="w3-container w3-center" style="margin:auto"><h1 style="color:#EB0028">Robert Kaufman</h1><h2 style="color:white">Co-Organizer</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="gus.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Gus Loomis '28</h1><h2 style="color:white">Co-Organizer</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="eloise.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Eloise McDonald '27</h1><h2 style="color:white">Co-Organizer</h2></div></div>
+    <div class="w3-display-container">
+    <div style="display:flex;justify-content: center;" data-aos="flip-down" class="autoshow">
+    <button onclick="goes()" style="color:#EB0028;background-color: black;border-radius:25px" class="w3-center w3-button">Change Layout</button></div>
+    <div class="w3-grid checkers" id="otroexample" style="width:80vw;margin-left:auto;margin-right:auto;position:relative;z-index:-1">
+        <div class="w3-padding w3-card autoshow example" data-aos="zoom-in"><img src="kaufman.jpg" width="100%"><div class="w3-container w3-center" style="margin:auto"><h1 style="color:#EB0028">Robert Kaufman</h1><h2 style="color:white">Co-Organizer</h2></div></div>
+        <div class="w3-padding w3-card autoshow example" data-aos="zoom-in"><img src="gus.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Gus Loomis '28</h1><h2 style="color:white">Co-Organizer</h2></div></div>
+        <div class="w3-padding w3-card autoshow example" data-aos="zoom-in"><img src="eloise.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Eloise McDonald '27</h1><h2 style="color:white">Co-Organizer</h2></div></div>
+    </div>
+    <button class="w3-button w3-display-left w3-black boom w3-hide" style="height:50%;opacity: 0.5;border-radius: 0 50px 50px 0;" onclick="changepic(-1)">&#10094;</button>
+    <button style="height:50%;opacity: 0.5;border-radius:50px 0 0 50px" class="w3-hide boom w3-button w3-display-right w3-black" onclick="changepic(1)">&#10095;</button>
     </div>
     <div class="w3-center w3-container" style="position:relative;z-index:-1;margin-left:auto;margin-right:auto;margin-top:2vh;width:60vw;left:0;top:0;right:0;">
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
@@ -203,34 +222,35 @@
     <div class="w3-container w3-center" style="width:60vw;margin:auto;">
         <h2 style="color:#EB0028;text-align:center;font-size:min(10vw, 50px);margin-top: 3vh" class="autoshow" data-aos="flip-up">The Committee</h2>
     </div>
-    <div class="w3-grid checkers w3-center" style="width:80vw;margin-left:auto;margin-right:auto;">
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="masonman.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Mason Pinkerton '28</h1><h4 style="color:white">Website Developer/Manager | Creative Director</h4></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="braylon.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Braylon Cambor '26</h1><h2 style="color:white">Team Member</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="vivian.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Vivian Gerber '27</h1><h2 style="color:white">Team Member</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="avag.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Ava Grant '27</h1><h2 style="color:white">Social Media Director</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="johnhardesty.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">John Hardesty '26</h1><h4 style="color:white">Program Director | Senior Advisor/Consultant</h4></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="eddie.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Eddie Langford '26</h1><h2 style="color:white">Technical Director</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="kitty.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Kitty Lubin '27</h1><h2 style="color:white">Team Member</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="hiruni.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Hiruni Manawadu '28</h1><h2 style="color:white">Philanthropy Chair</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="bayli.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Bayli Richardson '27</h1><h2 style="color:white">Team Member</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="romig.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Elizabeth Romig '28</h1><h2 style="color:white">Music Director</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="campbell.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Campbell Smith '28</h1><h2 style="color:white">Philanthropy Chair</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="jonni.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Jonathan Stephens '28</h1><h2 style="color:white">Art/Video Director</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="jonsoren.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Jon Soren UyHam '26</h1><h2 style="color:white">Team Member</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="james.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">James Smith '25</h1><h2 style="color:white">Senior Art Director</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="hailey.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Hailey Huang '28</h1><h2 style="color:white">Team Member</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="maddie.jpeg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Madeleine Ganz '27</h1><h2 style="color:white">Lower School Liason</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in"><img src="grayden.jpeg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Grayden Auchincloss '28</h1><h2 style="color:white">Middle School Liaison</h2></div></div>
+    <div class="w3-display-container">
+        <div style="display: flex;justify-content: center;" data-aos="flip-down" class="autoshow">
+            <button onclick="goes2()" style="color:#EB0028;background-color: black;border-radius:25px" class="w3-center w3-button">Change Layout</button></div>
+    <div class="w3-grid checkers" id="otroexample2" style="width:80vw;margin-left:auto;margin-right:auto;position: relative;z-index: -1;">
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="masonman.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Mason Pinkerton '28</h1><h4 style="color:white">Website Developer/Manager | Creative Director</h4></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="braylon.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Braylon Cambor '26</h1><h2 style="color:white">Team Member</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="vivian.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Vivian Gerber '27</h1><h2 style="color:white">Team Member</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="avag.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Ava Grant '27</h1><h2 style="color:white">Social Media Director</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="johnhardesty.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">John Hardesty '26</h1><h4 style="color:white">Program Director | Senior Advisor/Consultant</h4></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="eddie.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Eddie Langford '26</h1><h2 style="color:white">Technical Director</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="kitty.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Kitty Lubin '27</h1><h2 style="color:white">Team Member</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="hiruni.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Hiruni Manawadu '28</h1><h2 style="color:white">Philanthropy Chair</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="bayli.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Bayli Richardson '27</h1><h2 style="color:white">Team Member</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="romig.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Elizabeth Romig '28</h1><h2 style="color:white">Music Director</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="campbell.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Campbell Smith '28</h1><h2 style="color:white">Philanthropy Chair</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="jonni.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Jonathan Stephens '28</h1><h2 style="color:white">Art/Video Director</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="jonsoren.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Jon Soren UyHam '26</h1><h2 style="color:white">Team Member</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="james.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">James Smith '25</h1><h2 style="color:white">Senior Art Director</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="hailey.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Hailey Huang '28</h1><h2 style="color:white">Team Member</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="maddie.jpeg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Madeleine Ganz '27</h1><h2 style="color:white">Lower School Liason</h2></div></div>
+        <div class="w3-padding w3-card autoshow example2" data-aos="zoom-in"><img src="grayden.jpeg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Grayden Auchincloss '28</h1><h2 style="color:white">Middle School Liaison</h2></div></div>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
+    <button class="w3-button w3-display-left w3-black boom2 w3-hide" style="height:50%;opacity: 0.5;border-radius: 0 50px 50px 0;" onclick="changepic2(-1)">&#10094;</button>
+    <button style="height:50%;opacity: 0.5;border-radius:50px 0 0 50px" class="w3-hide boom2 w3-button w3-display-right w3-black" onclick="changepic2(1)">&#10095;</button>
     </div>
     <div class="w3-center w3-container" style="position:relative;z-index:-1;margin-left:auto;margin-right:auto;margin-top:2vh;width:60vw;left:0;top:0;right:0;">
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
-    <div class="w3-container w3-center" style="width:60vw;margin:auto;" data-aos="zoom-out">
+    <div class="w3-container w3-center" style="width:60vw;margin:auto;">
         <h6 style="color:#EB0028;text-align:center;font-size:45px">Not Pictured</h6>
         <p style="color: white;text-align:left;font-size:25px">Alex Eachus '27 - Communications Chair</p>
         <p style="color: white;text-align:left;font-size:25px">Will Grabowski '26 - Stage Design Director</p>
@@ -239,6 +259,61 @@
     <br>
     <br>
     <script>
+
+        /*function changeJ(listt) {
+            if (listt.matches){
+                
+                document.getElementById("sigmaa").innerHTML = "";
+            }
+            else {
+                document.getElementById("sigmaa").innerHTML = "TEDxPaceAcademy";
+            }}
+
+        xxx = window.matchMedia("(max-width:700px)");
+
+        changeJ(xxx);
+
+        xxx.addEventListener("change", function() {
+            changeJ(xxx);
+        });*/
+
+        window.isSS = false;
+
+        function goes() {
+            console.log(window.isSS);
+            if (window.isSS) {
+                window.isSS = false;
+                var bums = document.getElementsByClassName("example");
+                Array.from(bums).forEach(element => {
+                    element.classList.remove("bum");
+                    element.style.display="block";
+                });
+                var booms = document.getElementsByClassName("boom");
+                Array.from(booms).forEach(element => {
+                    element.classList.add("w3-hide");
+                });
+                /*var slideindex = 1;
+                showpic(slideindex);*/
+                document.getElementById("otroexample").classList.add("checkers");
+                document.getElementById("otroexample").classList.remove("checkers2");
+            } else {
+                window.isSS = true;
+                
+                var bums = document.getElementsByClassName("example");
+                Array.from(bums).forEach(element => {
+                    element.classList.add("bum");
+                });
+                var booms = document.getElementsByClassName("boom");
+                Array.from(booms).forEach(element => {
+                    element.classList.remove("w3-hide");
+                });
+                var slideindex = 1;
+                showpic(slideindex);
+                document.getElementById("otroexample").classList.remove("checkers");
+                document.getElementById("otroexample").classList.add("checkers2");
+            }
+        }
+
         var slideindex = 1;
         showpic(slideindex);
 
@@ -249,7 +324,8 @@
 
         function showpic(num) {
             var i;
-            var imgs = document.getElementsByClassName("myslide");
+            var imgs = document.getElementsByClassName("bum");
+            console.log(imgs.length);
             var midivs = document.getElementsByClassName("mydivs");
             if (num > imgs.length) {
                 slideindex = 1;
@@ -259,13 +335,82 @@
             }
             for (i=0;i<imgs.length;i++) {
                 imgs[i].style.display = "none";
-                midivs[i].style.display = "none";
+                //midivs[i].style.display = "none";
             }
+            console.log(slideindex);
             imgs[slideindex-1].style.display = "block";
-            midivs[slideindex-1].style.display = "block";
+            //midivs[slideindex-1].style.display = "block";
 
-            currentslidenum = document.getElementById("currentslidenum");
-            currentslidenum.innerHTML = slideindex + " / " + imgs.length;
+            //currentslidenum = document.getElementById("currentslidenum");
+            //currentslidenum.innerHTML = slideindex + " / " + imgs.length;
+        }
+
+        window.isSS2 = false;
+
+        function goes2() {
+            console.log(window.isSS2);
+            if (window.isSS2) {
+                window.isSS2 = false;
+                var bums2 = document.getElementsByClassName("example2");
+                Array.from(bums2).forEach(element => {
+                    element.classList.remove("bum2");
+                    element.style.display="block";
+                });
+                var booms2 = document.getElementsByClassName("boom2");
+                Array.from(booms2).forEach(element => {
+                    element.classList.add("w3-hide");
+                });
+                /*var slideindex2 = 1;
+                showpic2(slideindex2);*/
+                document.getElementById("otroexample2").classList.add("checkers");
+                document.getElementById("otroexample2").classList.remove("checkers2");
+            } else {
+                window.isSS2 = true;
+                
+                var bums2 = document.getElementsByClassName("example2");
+                Array.from(bums2).forEach(element => {
+                    element.classList.add("bum2");
+                });
+                var booms2 = document.getElementsByClassName("boom2");
+                Array.from(booms2).forEach(element => {
+                    element.classList.remove("w3-hide");
+                });
+                slideindex2 = 1;
+                showpic2(slideindex2);
+                document.getElementById("otroexample2").classList.remove("checkers");
+                document.getElementById("otroexample2").classList.add("checkers2");
+            }
+        }
+
+        slideindex2 = 1;
+        showpic2(slideindex2);
+
+        function changepic2(num2) {
+            slideindex2 += num2;
+            showpic2(slideindex2);
+        }
+
+        function showpic2(num2) {
+            var i2;
+            var imgs2 = document.getElementsByClassName("bum2");
+            console.log(imgs2.length);
+            var midivs2 = document.getElementsByClassName("mydivs2");
+            if (num2 > imgs2.length) {
+                slideindex2 = 1;
+            }
+            if (num2 < 1) {
+                slideindex2 = imgs2.length;
+            }
+            for (i2=0;i2<imgs2.length;i2++) {
+                imgs2[i2].style.display = "none";
+                //midivs[i].style.display = "none";
+            }
+            console.log(slideindex2);
+            imgs2[(slideindex2)-1].style.display = "block";
+            //midivs[slideindex-1].style.display = "block";
+
+            //currentslidenum = document.getElementById("currentslidenum");
+            //currentslidenum.innerHTML = slideindex + " / " + imgs.length;
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
