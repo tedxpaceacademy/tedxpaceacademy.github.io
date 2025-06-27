@@ -96,10 +96,11 @@
                 transform: translateY(0) scale(1);
             }
         }
+        @supports (animation-timeline: view()) {
         .autoshow {
             animation: autoshowanimation both;
             animation-timeline: view(50% auto);
-        }
+        }}
         @keyframes autohideanimation {
             0% {
                 transform: translateY(-300px) scale(1.3);
@@ -239,17 +240,17 @@
                     <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white;border-radius:0px 0px 50px 50px">Challenging the Status Quo (Past Event)</a>
         </div>
     </div>
-    <div class="w3-container" style="margin-left:15vw;margin-right: 15vw;">
+    <div class="w3-container" style="margin-left:15vw;margin-right: 15vw;" data-aos="fade-down">
         <img src="gbtg.jpg" width="50%" id="gees" style="float:left;">
         <div style="width:50%;float:right;" class="w3-center">
         <h1 style="color:white;">Fall 2022</h1>
-        <img src="football.webp" width="100%" style="margin-top: 10px;" data-aos="flip-left">
+        <img src="football.webp" width="80%" style="margin-top: 10px;" data-aos="flip-left">
         </div>
     </div>
     <div class="w3-center w3-container" style="position:relative;z-index:-1;margin-left:auto;margin-right:auto;width:60vw;left:0;top:0;right:0;">
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
-        <div class="mvm w3-container autoblur" style="margin-top:30px">
+        <div class="mvm w3-container autoblur" data-aos="flip-left" style="margin-top:30px">
             <div class="w3-container w3-center changer">
                 <iframe width="100%" class="sighbow" src="https://www.youtube.com/embed/kTvL5O7YOfQ?si=E37i9yWDEYvMvfj2"></iframe>
             </div>
@@ -258,16 +259,16 @@
                 <h2 style="color:white;">Speech by Camille Caton</h2>
             </div>
         </div>
-        <div class="mvm w3-container autoblur" style="margin-top:30px">
-            <div class="w3-container w3-center changer">
+        <div class="mvm w3-container autoblur" data-aos="flip-left" style="margin-top:30px">
+            <div class="w3-container w3-center changerother">
                 <iframe width="100%" class="sighbow" src="https://www.youtube.com/embed/1lzWm9ntgu0?si=bzj_Exb7Pav0nk0k"></iframe>
             </div>
-            <div class="w3-center changerother">
+            <div class="w3-center changer">
                 <h1 style="color: #EB0028;">"How Playing the Cello Shaped My Life"</h1>
                 <h2 style="color:white;">Speech by David Fu</h2>
             </div>
         </div>
-        <div class="mvm w3-container autoblur" style="margin-top:30px">
+        <div class="mvm w3-container autoblur" data-aos="flip-left" style="margin-top:30px">
             <div class="w3-container w3-center changer">
                 <iframe width="100%" class="sighbow" src="https://www.youtube.com/embed/qpc2z11F5Xg?si=ZlYDJsLWb7Mc6J_w"></iframe>
             </div>
@@ -276,16 +277,16 @@
                 <h2 style="color:white;">Speech by Leah Negero</h2>
             </div>
         </div>
-        <div class="mvm w3-container autoblur" style="margin-top:30px">
-            <div class="w3-container w3-center changer">
+        <div class="mvm w3-container autoblur" data-aos="flip-left" style="margin-top:30px">
+            <div class="w3-container w3-center changerother">
                 <iframe width="100%" class="sighbow" src="https://www.youtube.com/embed/9gJIdrq2C58?si=C4ngQR94tlIc0zOw"></iframe>
             </div>
-            <div class="w3-center changerother">
+            <div class="w3-center changer">
                 <h1 style="color: #EB0028;">"The Power of Fifteen"</h1>
                 <h2 style="color:white;">Speech by John Hardesty</h2>
             </div>
         </div>
-        <div class="mvm w3-container autoblur" style="margin-top:30px">
+        <div class="mvm w3-container autoblur" data-aos="flip-left" style="margin-top:30px">
             <div class="w3-container w3-center changer">
                 <iframe width="100%" class="sighbow" src="https://www.youtube.com/embed/F5XfA8q2cZE?si=M-S2e0MXGQaCvENM"></iframe>
             </div>
@@ -294,11 +295,11 @@
                 <h2 style="color:white;">Speech by Amina Zubairi</h2>
             </div>
         </div>
-        <div class="mvm w3-container autoblur" style="margin-top:30px">
-            <div class="w3-container w3-center changer">
+        <div class="mvm w3-container autoblur" data-aos="flip-left" style="margin-top:30px">
+            <div class="w3-container w3-center changerother">
                 <iframe width="100%" class="sighbow" src="https://www.youtube.com/embed/tFxlPX3v6ok?si=ZLesqCQiLinWQvWU"></iframe>
             </div>
-            <div class="w3-center changerother">
+            <div class="w3-center changer">
                 <h1 style="color: #EB0028;">"One Percent Better"</h1>
                 <h2 style="color:white;">Speech by Drew Schiffer</h2>
             </div>
@@ -308,14 +309,14 @@
     </div>
     </div>
     <div class="w3-center w3-container">
-        <h1 style="color:#EB0028">Where Are They Now?</h1>
+        <h1 style="color:#EB0028" data-aos="zoom-out">Where Are They Now?</h1>
         <div class="w3-grid checkers w3-center" style="width:80vw;margin-left:auto;margin-right:auto;">
-        <div class="w3-padding w3-card autoshow"><img src="denison.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Camille Caton</h1></div></div>
-        <div class="w3-padding w3-card autoshow"><img src="colomb Background Removed.png" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">David Fu</h1></div></div>
-        <div class="w3-padding w3-card autoshow"><img src="brown.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Claire Jiang</h1></div></div>
-        <div class="w3-padding w3-card autoshow"><img src="lehigh.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Davis Rice</h1></div></div>
-        <div class="w3-padding w3-card autoshow"><img src="cuse.png" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Drew Schiffer</h1></div></div>
-        <div class="w3-padding w3-card autoshow"><img src="georgetown.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Amina Zubairi</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="denison.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Camille Caton</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="colomb Background Removed.png" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">David Fu</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="brown.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Claire Jiang</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="lehigh.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Davis Rice</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="cuse.png" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Drew Schiffer</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="georgetown.jpg" width="100%"><div class="w3-container w3-center"><h1 style="color:#EB0028">Amina Zubairi</h1></div></div>
     </div>
     </div>
     <br>
@@ -392,6 +393,24 @@
         xx.addEventListener("change", function() {
             changeJ(xx);
         });
+    </script>
+    <script>
+        if (CSS.supports("animation-timeline: view()")) {
+            let brusz = document.getElementsByClassName("autoblur");
+            Array.from(brusz).forEach(element => {
+                element.removeAttribute("data-aos");
+            });
+        } else {
+            //
+        }
+        if (CSS.supports("animation-timeline: view()")) {
+            let brusz = document.getElementsByClassName("autoshow");
+            Array.from(brusz).forEach(element => {
+                element.removeAttribute("data-aos");
+            });
+        } else {
+            //
+        }
     </script>
 </body>
 </html>
