@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="aos.css">
     <link rel="icon" type="image/x-icon" href="TXLOGO.ico">
     <style>
+
         .myslide {
             width:100%;
             height:auto;
@@ -29,8 +30,13 @@
         }
         body {
             background-color: black;
-            font-family: Helvetica;
+            
             padding-top:5vh;
+            padding-left:5vw;
+            padding-right:5vw;
+        }
+        * {
+            font-family: Futura;
         }
         .okok {
             height:60vh;
@@ -63,7 +69,7 @@
                 margin-top: -100px;*/
                 position: absolute;
                 transform: rotate(150deg);
-                left:-30vw;
+                left:min(-30vw, -400px);
                 right:0;
                 top:0vh;
                 margin:auto;
@@ -131,10 +137,10 @@
 </head>
 <body>
     <!--Navigation Bar-->
-    <div class="w3-top">
+    <div class="w3-top" style="margin-left:-5vw;margin-right:-5vw">
         <div class="w3-bar w3-black" style="border-bottom: 2px solid red">
             <img src="TXLOGO.png" class="w3-bar-item" width="50px" height="50px">
-            <div class="w3-bar-item btnn" style="font-size: min(4vw, 36px);margin-left:-25px;"><strong id="sigmaa">TEDxPaceAcademy</strong></div>
+            <div class="w3-bar-item btnn" style="font-size: 30px;margin-left:-25px;"><strong id="sigmaa">PaceAcademy</strong></div>
             <a onclick="freaky()" class="w3-right w3-bar-item btnn w3-button w3-hover-dark-grey w3-hide-large">&#9776;</a>
             <div class="w3-right">
             <a href="index.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey tx-red">Home</a>
@@ -143,23 +149,23 @@
             <div class="w3-dropdown-click w3-hide-small w3-hide-medium" style="margin-right:50px;">
                 <a onclick="myContFunc()" class="w3-button btnn w3-hover-dark-grey">Past Events &darr;</a>
                 <div class="w3-dropdown-content w3-center w3-bar-block w3-card-4" id="mycontent" style="color:white;border: 2px solid red;border-radius:0px 0px 0px 50px;border-top:none;border-right:none">
-                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Living With Love</a>
-                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Do I Dare?</a>
-                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Game Behind the Game</a>
-                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Force of Words</a>
-                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;border-radius:0px 0px 0px 50px;">Challenging the Status Quo</a>
+                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Living With Love (Fall 2024)</a>
+                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">Do I Dare? (Fall 2023)</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Game Behind the Game (Fall 2022)</a>
+                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Force of Words (Fall 2021)</a>
+                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;border-radius:0px 0px 0px 50px;">Challenging the Status Quo (Spring 2021)</a>
                 </div>
             </div>
             </div>
         </div>
         <div id="demo" style="background-color: black;margin-left:20vw;margin-right:20vw;border:2px solid red;border-radius:0px 0px 50px 50px;border-top:none" class="w3-hide w3-bar-block w3-hide-large">
-            <a href="meettheteam.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-center" style="color:white">Meet the Team</a>
-            <a href="thisyrevent.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-center" style="color:white">This Year's Event</a>
-                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">Living With Love (Past Event)</a>
-                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">Do I Dare? (Past Event)</a>
-                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">The Game Behind the Game (Past Event)</a>
-                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white">The Force of Words (Past Event)</a>
-                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey btnn w3-center" style="color:white;border-radius:0px 0px 50px 50px">Challenging the Status Quo (Past Event)</a>
+            <a href="meettheteam.html" class="w3-bar-item w3-button w3-hover-dark-grey w3-center" style="color:white;padding:20px">Meet the Team</a>
+            <a href="thisyrevent.html" class="w3-bar-item w3-button w3-hover-dark-grey w3-center" style="color:white;padding:20px">This Year's Event</a>
+                    <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">Living With Love (Past Event, Fall 2024)</a>
+                    <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">Do I Dare? (Past Event, Fall 2023)</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">The Game Behind the Game (Past Event, Fall 2022)</a>
+                    <a href="fow.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">The Force of Words (Past Event, Fall 2021)</a>
+                    <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;border-radius:0px 0px 50px 50px;padding:20px">Challenging the Status Quo (Past Event, Spring 2021)</a>
         </div>
     </div>
     <!--
@@ -176,10 +182,10 @@
     </div>
     <div id="sigbeat" class="w3-container w3-center" style="width:60vw;margin-left:auto;margin-right:auto;z-index:99">
 
-        <h2 style="color:#EB0028;text-align:left;margin-bottom:5vh;margin-top:5vh" class="autoblur" data-aos="flip-right">As an Organization, TEDx is...</h2>
-        <p style="color:white;text-align: left;margin-bottom:5vh" class="autoblur" data-aos="flip-left">a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.</p>
-        <h2 style="color:#EB0028;text-align: left;margin-bottom:5vh" class="autoblur" data-aos="flip-up">At Pace Academy, in the fall of 2019,</h2>
-        <p style="color:white;text-align: left;margin-bottom:5vh" class="autoblur" data-aos="flip-down">Michael Fu '21 approached his English teacher, Robert Kaufman, about the idea of potentially organizing a TEDx event at Pace Academy together. Neither Fu nor Kaufman knew what co-organizing TEDx entailed, but since both had an aspiration to put on a TEDx event to promote ideas worth spreading, they began planning the first TEDxPaceAcademy event for the spring of 2020. Covid-19 pushed the inaugural event entitled, "Challenging the Status Quo", to the spring of 2021. After the success of the first event, Kaufman began organizing the second TEDxPaceAcademy event ("The Force of Words") for the fall of 2021 with Emma Beth Neville '23 and Marit UyHam '23. Claire Jiang '25 and Davis Rice '23 co-organized the third event ("The Game Behind the Game") with Kaufman in the fall of 2022. And Martin Andra-Thomas '24, Harper Auchincloss '25, and Kate Grice '25 co-organized the fourth event ("Do I Dare?") in the fall of 2023. Thanks to extraordinary support from Fred Assaf, Chad Wabrek, Scott Sargent, Eric Forslund, and many others, TEDx has been able to continue improving and making a new program with different speakers each year.</p>
+        <h2 style="color:#EB0028;text-align:left;margin-bottom:5vh;margin-top:5vh;font-family: Futura;" class="autoblur" data-aos="flip-right">As an Organization, TEDx is...</h2>
+        <p style="color:white;text-align: left;margin-bottom:5vh;line-height: 35px;" class="autoblur" data-aos="flip-left">a grassroots initiative, created in the spirit of TED’s overall mission to research and discover “ideas worth spreading.” TEDx brings the spirit of TED to local communities around the globe through TEDx events. These events are organized by passionate individuals who seek to uncover new ideas and to share the latest research in their local areas that spark conversations in their communities. TEDx events include live speakers and recorded TED Talks, and are organized independently under a free license granted by TED. These events are not controlled by TED, but event organizers agree to abide by our format, and are offered guidelines for curation, speaker coaching, event organizing and more. They learn from us and from each other. More than 3000 events are now held annually.</p>
+        <h2 style="color:#EB0028;text-align: left;margin-bottom:5vh;font-family: Futura;" class="autoblur" data-aos="flip-up">At Pace Academy, in the fall of 2019,</h2>
+        <p style="color:white;text-align: left;margin-bottom:5vh;line-height: 35px;" class="autoblur" data-aos="flip-down">Michael Fu '21 approached his English teacher, Robert Kaufman, about the idea of potentially organizing a TEDx event at Pace Academy together. Neither Fu nor Kaufman knew what co-organizing TEDx entailed, but since both had an aspiration to put on a TEDx event to promote ideas worth spreading, they began planning the first TEDxPaceAcademy event for the spring of 2020. Covid-19 pushed the inaugural event entitled, "Challenging the Status Quo", to the spring of 2021. After the success of the first event, Kaufman began organizing the second TEDxPaceAcademy event ("The Force of Words") for the fall of 2021 with Emma Beth Neville '23 and Marit UyHam '23. Claire Jiang '25 and Davis Rice '23 co-organized the third event ("The Game Behind the Game") with Kaufman in the fall of 2022. And Martin Andra-Thomas '24, Harper Auchincloss '25, and Kate Grice '25 co-organized the fourth event ("Do I Dare?") in the fall of 2023. Thanks to extraordinary support from Fred Assaf, Chad Wabrek, Scott Sargent, Eric Forslund, and many others, TEDx has been able to continue improving and making a new program with different speakers each year.</p>
 
     </div>
     <div class="w3-center w3-container" style="position:relative;z-index:-1;margin-left:auto;margin-right:auto;margin-top:2vh;width:60vw;left:0;top:0;right:0;">
@@ -335,12 +341,17 @@
         function changeJ(listt) {
             if (listt.matches){
                 document.getElementById("changeme").innerHTML = "PA";
-                
-                document.getElementById("sigmaa").innerHTML = "";
+                Array.from(document.getElementsByClassName("autoRotate")).forEach(el => {
+                    el.style.left = "-30vw";
+                });
+                document.getElementById("sigmaa").innerHTML = "PA";
             }
             else {
                 document.getElementById("changeme").innerHTML = "PaceAcademy";
-                document.getElementById("sigmaa").innerHTML = "TEDxPaceAcademy";
+                document.getElementById("sigmaa").innerHTML = "PaceAcademy";
+                Array.from(document.getElementsByClassName("autoRotate")).forEach(el => {
+                    el.style.left = "min(-30vw, -400px)";
+                });
             }}
 
         xx = window.matchMedia("(max-width:700px)");
