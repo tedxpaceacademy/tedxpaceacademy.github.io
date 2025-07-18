@@ -162,18 +162,27 @@
             }
         }
         .checkers {
-            gap:8px;
+            gap:60px;
             grid-template-columns: 1fr;
         }
-        @media (min-width: 600px) {
+        .autoshow img {
+            height:70vw
+        }
+        @media (min-width: 800px) {
             .checkers {
                 grid-template-columns: 1fr 1fr;
             }
+            .autoshow img {
+            height:40vw
         }
-        @media (min-width: 900px) {
+        }
+        @media (min-width: 1300px) {
             .checkers {
                 grid-template-columns: 1fr 1fr 1fr;
             }
+            .autoshow img {
+            height:30vw
+        }
         }
         #gees {
             height:42vw;
@@ -196,6 +205,12 @@
         }
         h1, h2, h3, p, h4, h5, h6 {
             font-family: Futura;
+        }
+        .plzz {
+            float:left;border-radius: 25px;
+        }
+        .plss {
+            width:50%;float:right;
         }
     </style>
 </head>
@@ -234,10 +249,10 @@
         </div>
     </div>
     <div class="w3-container" style="margin-left:15vw;margin-right:15vw;" data-aos="fade-left">
-        <div width="50%" style="float:left;border-radius: 25px;">
+        <div width="50%" class="plzz">
         <img src="did.jpg" id="gees">
         </div>
-        <div style="width:50%;float:right;" class="w3-center">
+        <div class="w3-center plss">
         <h1 style="color:white;">Fall 2023</h1>
         <img src="orbitt.webp" width="100%" style="margin-top:10px;" class="autoRotate">
         </div>
@@ -306,11 +321,11 @@
     <div class="w3-center w3-container">
         <h1 style="color:#EB0028" data-aos="zoom-out">Where Are They Now?</h1>
         <div class="w3-grid checkers w3-center" style="width:80vw;margin-left:auto;margin-right:auto;">
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="stanford.png" style="height:85%;width: 90%;"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Martin Andra-Thomas</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nwu.jpg" style="height:85%;width: 90%;"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Harper Auchincloss</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nyu.jpg" style="height:85%;width: 90%;"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Carly Cannon</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="maryland.png" style="height:85%;width: 90%;"><div style="position:absolute;bottom:-10;left:0;width:100%;text-align: center;"><h1 style="color:white">Vivian Kohn</h1><h2 style="color:#EB0028">(Maryland)</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="michu.jpg" style="height:85%;width: 90%;"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Kate Grice</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="stanford.png" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Martin Andra-Thomas</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nwu.jpg" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Harper Auchincloss</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nyu.jpg" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Carly Cannon</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="maryland.png" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Vivian Kohn</h1><h2 style="color:#EB0028">(Maryland)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="michu.jpg" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Kate Grice</h1></div></div>
     </div>
     </div>
     <br>
@@ -374,7 +389,7 @@
         }
         function changeJ(listt) {
             if (listt.matches){
-                document.getElementById("sigmaa").innerHTML = "PA";
+                document.getElementById("sigmaa").innerHTML = "";
             }
             else {
                 document.getElementById("sigmaa").innerHTML = "PaceAcademy";

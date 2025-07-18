@@ -175,18 +175,27 @@
             }
         }
         .checkers {
-            gap:8px;
+            gap:60px;
             grid-template-columns: 1fr;
         }
-        @media (min-width: 600px) {
+        .autoshow img {
+            height:70vw
+        }
+        @media (min-width: 800px) {
             .checkers {
                 grid-template-columns: 1fr 1fr;
             }
+            .autoshow img {
+            height:40vw
         }
-        @media (min-width: 900px) {
+        }
+        @media (min-width: 1300px) {
             .checkers {
                 grid-template-columns: 1fr 1fr 1fr;
             }
+            .autoshow img {
+            height:25vw
+        }
         }
         #gees {
             height:42vw;
@@ -319,12 +328,12 @@
     <div class="w3-center w3-container">
         <h1 style="color:#EB0028" data-aos="zoom-out">Where Are They Now?</h1>
         <div class="w3-grid checkers w3-center" style="width:80vw;margin-left:auto;margin-right:auto;">
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="denison.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Camille Caton</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="colomb Background Removed.png" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">David Fu</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="brown.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:-10;left:0;width:100%;text-align: center;"><h1 style="color:white">Claire Jiang</h1><h2 style="color:#EB0028">(Brown)</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="lehigh.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:-10;left:0;width:100%;text-align: center;"><h1 style="color:white">Davis Rice</h1><h2 style="color:#EB0028">(Lehigh)</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="cuse.png" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Drew Schiffer</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="georgetown.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:-10;left:0;width:100%;text-align: center;"><h1 style="color:white">Amina Zubairi</h1><h2 style="color:#EB0028">(Georgetown)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="denison.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Camille Caton</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="colomb Background Removed.png" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">David Fu</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="brown.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Claire Jiang</h1><h2 style="color:#EB0028">(Brown)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="lehigh.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Davis Rice</h1><h2 style="color:#EB0028">(Lehigh)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="cuse.png" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Drew Schiffer</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-left"><img src="georgetown.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Amina Zubairi</h1><h2 style="color:#EB0028">(Georgetown)</h2></div></div>
     </div>
     </div>
     <br>
@@ -388,7 +397,7 @@
         }
         function changeJ(listt) {
             if (listt.matches){
-                document.getElementById("sigmaa").innerHTML = "PA";
+                document.getElementById("sigmaa").innerHTML = "";
             }
             else {
                 document.getElementById("sigmaa").innerHTML = "PaceAcademy";

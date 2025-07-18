@@ -196,18 +196,27 @@
             }
         }
         .checkers {
-            gap:8px;
+            gap:60px;
             grid-template-columns: 1fr;
         }
-        @media (min-width: 600px) {
+        .autoshow img {
+            height:70vw
+        }
+        @media (min-width: 800px) {
             .checkers {
                 grid-template-columns: 1fr 1fr;
             }
+            .autoshow img {
+            height:36vw
         }
-        @media (min-width: 900px) {
+        }
+        @media (min-width: 1300px) {
             .checkers {
                 grid-template-columns: 1fr 1fr 1fr;
             }
+            .autoshow img {
+            height:26vw
+        }
         }
         #gees {
             height:47.5vw;
@@ -263,7 +272,7 @@
                     <a href="thisyrevent.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">This Year's Event</a>
                     <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">Living With Love (Past Event, Fall 2024)</a>
                     <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">Do I Dare? (Past Event, Fall 2023)</a>
-                    <a href="gtbg.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">The Game Behind the Game (Past Event, Fall 2022)</a>
+                    <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">The Game Behind the Game (Past Event, Fall 2022)</a>
                     <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;border-radius:0px 0px 50px 50px;padding:20px">Challenging the Status Quo (Past Event, Spring 2021)</a>
         </div>
     </div>
@@ -361,12 +370,12 @@
     <div class="w3-center w3-container">
         <h1 style="color:#EB0028" data-aos="zoom-out-up">Where Are They Now?</h1>
         <div class="w3-grid checkers w3-center" style="width:80vw;margin-left:auto;margin-right:auto;">
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="utenn.png" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Allie Campbell</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="santaclara.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Emma Killian</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="yale.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:-10;left:0;width:100%;text-align: center;"><h1 style="color:white">Emma Beth Neville</h1><h2 style="color:#EB0028">(Yale)</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="penn.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:-10;left:0;width:100%;text-align: center;"><h1 style="color:white">Pranavh Pradeep</h1><h2 style="color:#EB0028">(UPenn)</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="mit.png" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Kate Romero</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="dartmouth.jpg" style="height:85%;width:90%"><div style="position:absolute;bottom:0;left:0;width:100%;text-align: center;"><h1 style="color:white">Marit UyHam</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="utenn.png" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Allie Campbell</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="santaclara.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Emma Killian</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="yale.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Emma Beth Neville</h1><h2 style="color:#EB0028">(Yale)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="penn.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Pranavh Pradeep</h1><h2 style="color:#EB0028">(UPenn)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="mit.png" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Kate Romero</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-in-right"><img src="dartmouth.jpg" style="width:100%"><div class="w3-container w3-center"><h1 style="color:white">Marit UyHam</h1></div></div>
     </div>
     </div>
     <br>
@@ -430,7 +439,7 @@
         }
         function changeJ(listt) {
             if (listt.matches){
-                document.getElementById("sigmaa").innerHTML = "PA";
+                document.getElementById("sigmaa").innerHTML = "";
             }
             else {
                 document.getElementById("sigmaa").innerHTML = "PaceAcademy";

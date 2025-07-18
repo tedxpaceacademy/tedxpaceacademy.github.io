@@ -197,6 +197,12 @@
         h1, h2, h3, p, h4, h5, h6 {
             font-family: Futura;
         }
+        .plzz {
+            float:left;width:50%
+        }
+        .plss {
+            width:50%;float:right;
+        }
     </style>
 </head>
 <body>
@@ -237,10 +243,10 @@
     </div>
     <!--Sep pt. 2-->
     <div class="w3-container" style="margin-left:15vw;margin-right:15vw" data-aos="fade-right">
-        <div width="50%" style="float:left;">
+        <div class="plzz">
         <img src="lwl.jpg" id="gees">
         </div>
-        <div style="width:50%;float:right;" class="w3-center">
+        <div class="w3-center plss">
         <h1 style="color:white;">Fall 2024</h1>
         <img src="heart.png" width="80%" style="margin-top:10px;" class="heartbeat">
         </div>
@@ -380,7 +386,7 @@
         }
         function changeJ(listt) {
             if (listt.matches){
-                document.getElementById("sigmaa").innerHTML = "PA";
+                document.getElementById("sigmaa").innerHTML = "";
             }
             else {
                 document.getElementById("sigmaa").innerHTML = "PaceAcademy";
