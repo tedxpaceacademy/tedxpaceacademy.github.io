@@ -34,7 +34,7 @@
         .okok {
             height:30vh;
             width:100%;
-            margin-top:20vh;
+            margin-top:50vh;
             /*border:2px solid red;*/
         }
         @keyframes autoRotateAnimation {
@@ -162,7 +162,7 @@
             }
         }
         .checkers {
-            gap:60px;
+            row-gap:60px;
             grid-template-columns: 1fr;
         }
         .autoshow img {
@@ -207,10 +207,10 @@
             font-family: Futura;
         }
         .plzz {
-            float:left;border-radius: 25px;
+            border-radius: 25px;width:50%;float:left
         }
         .plss {
-            width:50%;float:right;
+            width:50%;float:right
         }
     </style>
 </head>
@@ -228,7 +228,7 @@
             <a href="did.html" class="w3-bar-item w3-button btnn w3-hover-dark-grey w3-hide-large tx-red">Do I Dare?</a>
             <div class="w3-dropdown-click w3-hide-small w3-hide-medium" style="margin-right:50px;">
                 <a onclick="myContFunc()" class="w3-button btnn w3-hover-dark-grey">Past Events &darr;</a>
-                <div class="w3-dropdown-content w3-center w3-bar-block w3-card-4" id="mycontent" style="color:white;border: 2px solid red;border-radius:0px 0px 0px 50px;border-top:none;border-right:none">
+                <div class="w3-dropdown-content w3-center w3-bar-block w3-card-4" id="mycontent" style="color:white;border: 2px solid red;border-radius:0px 0px 0px 50px;border-top:none;border-right:none;max-height:80vh;overflow-y: auto;">
                     <a href="lwl.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color:black;">Living With Love (Fall 2024)</a>
                     <a href="did.html" class="w3-button w3-bar-item w3-hover-dark-grey tx-red" style="-color: white;">Do I Dare? (Fall 2023)</a>
                     <a href="gbtg.html" class="w3-button w3-bar-item w3-hover-dark-grey" style="background-color: black;">The Game Behind the Game (Fall 2022)</a>
@@ -238,7 +238,7 @@
             </div>
             </div>
         </div>
-        <div id="demo" style="background-color: black;margin-left:20vw;margin-right:20vw;border:2px solid red;border-radius:0px 0px 50px 50px;border-top:none" class="w3-hide w3-bar-block w3-hide-large">
+        <div id="demo" style="max-height:80vh;overflow-y: auto;background-color: black;margin-left:20vw;margin-right:20vw;border:2px solid red;border-radius:0px 0px 50px 50px;border-top:none" class="w3-hide w3-bar-block w3-hide-large">
             <a href="index.html" class="w3-bar-item w3-button w3-hover-dark-grey w3-center" style="color:white;padding:20px">Home</a>
             <a href="meettheteam.html" class="w3-bar-item w3-button w3-hover-dark-grey w3-center" style="color:white;padding:20px">Meet the Team</a>
                     <a href="thisyrevent.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;padding:20px">This Year's Event</a>
@@ -248,13 +248,13 @@
                     <a href="csq.html" class="w3-button w3-bar-item w3-hover-dark-grey w3-center" style="color:white;border-radius:0px 0px 50px 50px;padding:20px">Challenging the Status Quo (Past Event, Spring 2021)</a>
         </div>
     </div>
-    <div class="w3-container" style="margin-left:15vw;margin-right:15vw;" data-aos="fade-left">
-        <div width="50%" class="plzz">
+    <div class="w3-container" style="margin-left:15vw;margin-right:15vw" data-aos="fade-right">
+        <div class="plzz">
         <img src="did.jpg" id="gees">
         </div>
         <div class="w3-center plss">
         <h1 style="color:white;">Fall 2023</h1>
-        <img src="orbitt.webp" width="100%" style="margin-top:10px;" class="autoRotate">
+        <img src="orbitt.webp" width="80%" style="margin-top:10px;" class="autoRotate">
         </div>
     </div>
     <div class="w3-center w3-container" style="position:relative;z-index:-1;margin-left:auto;margin-right:auto;width:60vw;left:0;top:0;right:0;margin-top: 5vw;">
@@ -318,15 +318,13 @@
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     </div>
-    <div class="w3-center w3-container">
-        <h1 style="color:#EB0028" data-aos="zoom-out">Where Are They Now?</h1>
-        <div class="w3-grid checkers w3-center" style="width:80vw;margin-left:auto;margin-right:auto;">
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="stanford.png" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Martin Andra-Thomas</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nwu.jpg" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Harper Auchincloss</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nyu.jpg" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Carly Cannon</h1></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="maryland.png" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Vivian Kohn</h1><h2 style="color:#EB0028">(Maryland)</h2></div></div>
-        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="michu.jpg" style="width:100%;"><div class="w3-container w3-center"><h1 style="color:white">Kate Grice</h1></div></div>
-    </div>
+    <div class="w3-center autoshow" style="margin-top:25px;" data-aos="fade-up"><h1 style="color:#EB0028;">Where Are They Now?</h1></div>
+        <div class="w3-grid checkers" style="width:80vw;margin-left:auto;margin-right:auto;">
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="stanford.png" style="width:100%;height:550px"><div class="w3-container w3-center"><h1 style="color:white">Martin Andra-Thomas</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nwu.jpg" style="width:100%;height:550px"><div class="w3-container w3-center"><h1 style="color:white">Harper Auchincloss</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="nyu.jpg" style="width:100%;height:550px"><div class="w3-container w3-center"><h1 style="color:white">Carly Cannon</h1></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="maryland.png" style="width:100%;height:550px"><div class="w3-container w3-center"><h1 style="color:white">Vivian Kohn</h1><h2 style="color:#EB0028">(Maryland)</h2></div></div>
+        <div class="w3-padding w3-card autoshow" data-aos="zoom-right"><img src="michu.jpg" style="width:100%;height:550px"><div class="w3-container w3-center"><h1 style="color:white">Kate Grice</h1></div></div>
     </div>
     <br>
     <br>
