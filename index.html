@@ -180,7 +180,29 @@
     <!--
     <div class="w3-center w3-container okok"></div>
 -->
-    <div style="height:10vh;background-color: black"></div>
+    <!-- Video Section -->
+    <div class="" style="margin-left: -5vw; width:100vw;" data-aos="zoom-in">
+        <button id="unmuter" onclick="unmuteVideo()" style="border-bottom-right-radius: 20px; border-color: transparent; cursor: pointer; box-shadow: none; position: absolute; z-index: 999; width: 20vh; color: white; background-color: black;">Unmute</button>
+        <video id="videograph"
+            style="
+                width:100%;
+                border-radius:none;
+                box-shadow:0 20px 50px rgba(0,0,0,0.45);
+                background:black;"
+            autoplay
+            playsinline
+            muted
+            loop
+            poster="tedxvideologo.png"
+            controlslist="nodownload noplaybackrate nofullscreen"
+            preload="metadata">
+            <source src="TheLittleThingsTEDx.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    
+
     <div class="w3-center w3-container" style="position:relative" data-aos="fade-up">
         <h1 style="font-size:50px;position: relative;z-index: 50;"><b><span style="color:red;">TEDx</span><span style="color:white;" id="changeme">PaceAcademy</span></b></h1>
         <img src="puzzlepiece.png" class="autoRotate">
@@ -189,33 +211,7 @@
     <div class="w3-center w3-container" style="position:relative;z-index:-1;margin-left:auto;margin-right:auto;margin-top:2vh;width:60vw;left:0;top:0;right:0;">
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
-    <!-- Video Section -->
-    <div class="w3-container w3-center" style="margin:6vh auto; width:90vw; max-width:1400px;">
-        <p style="
-            color:#ffffff;
-            font-family:Futura;
-            font-size:1.1rem;
-            letter-spacing:2px;
-            margin-bottom:1.5vh;
-            text-align:center;
-            opacity:0.85;">
-            Fall 2025: The Little Things
-        </p>
-        <video
-            style="
-                width:80%;
-                border-radius:16px;
-                box-shadow:0 20px 50px rgba(0,0,0,0.45);
-                background:black;"
-            controls
-            controlslist="nodownload noplaybackrate nofullscreen"
-            disablepictureinpicture
-            preload="metadata">
-            <source src="TheLittleThingsTEDx.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
-    </div>
+    
 
     <div id="sigbeat" class="w3-container w3-center" style="margin-left:auto;margin-right:auto;z-index:99">
 
@@ -407,6 +403,16 @@
             });
         } else {
             //
+        }
+
+        console.log(document.getElementById("videograph").muted)
+
+        function unmuteVideo() {
+            const vid = document.getElementById("videograph");
+            vid.muted = false;
+            console.log(vid.muted)
+            const unmuter = document.getElementById("unmuter");
+            unmuter.style.display = "none";
         }
     </script>
 </body>
