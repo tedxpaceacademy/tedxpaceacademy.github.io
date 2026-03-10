@@ -296,7 +296,7 @@
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     <!-- Video Section --> 
-    <div style="width:100vw; display: flex; justify-content:center; align-items:center" data-aos="zoom-in">
+    <div style="width:100vw; display: flex; justify-content:center; align-items:center;margin-top: 30px;" data-aos="zoom-in">
         <video id="videograph"
             style="
                 width: 80%;
@@ -306,10 +306,11 @@
             autoplay
             playsinline
             loop
+            controls
             poster="tedxvideologo.png"
             controlslist="nodownload noplaybackrate nofullscreen"
             preload="metadata">
-            <source src="TEDx-ThemeVideo.mov" type="video/mov">
+            <source src="TEDx-ThemeVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
@@ -475,6 +476,16 @@
             });
         } else {
             //
+        }
+
+        console.log(document.getElementById("videograph").muted)
+
+        function unmuteVideo() {
+            const vid = document.getElementById("videograph");
+            vid.muted = false;
+            console.log(vid.muted)
+            const unmuter = document.getElementById("unmuter");
+            unmuter.style.display = "none";
         }
     </script>
 </body>
