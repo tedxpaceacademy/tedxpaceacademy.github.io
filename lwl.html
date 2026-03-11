@@ -256,10 +256,12 @@
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     <!-- Video Section --> 
-    <div style="width:100vw; display: flex; justify-content:center; align-items:center" data-aos="zoom-in">
+     <div style="width: 100vw; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 50vw; border: 2px solid red; margin-top: 30px; border-radius: 5px;" data-aos="zoom-in">
+        <button id="unmuter" onclick="unmuteVideo()" style="border-bottom-right-radius: 20px; border-color: transparent; cursor: pointer; box-shadow: none; position: absolute; z-index: 999; width: 20vh; color: white; background-color: black;">Unmute</button>
         <video id="videograph"
             style="
-                width: 80%;
+                width: 100%;
                 border-radius:none;
                 box-shadow:0 20px 50px rgba(0,0,0,0.45);
                 background:black;"
@@ -269,10 +271,11 @@
             loop
             poster="tedxvideologo.png"
             controlslist="nodownload noplaybackrate nofullscreen"
-            preload="metadata">
+            preload="auto">
             <source src="TEDx-ThemeVideo.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+    </div>
     </div>
         <div class="mvm w3-container autoblur" style="margin-top:30px" data-aos="flip-up">
             <div class="w3-container w3-center changer">
@@ -342,10 +345,11 @@
         <div style="background-color:white;height:0.1vh;border-radius:50px"></div>
     </div>
     </div>
-    <div class="w3-center w3-container" data-aos="zoom-left">
+    <div class="w3-center w3-container">
         <h1 style="color:#EB0028">Where Are They Now?</h1>
         <h2 style="color:white">All speakers are currently underclassmen</h2>
     </div>
+    
     <br>
     <br>
     <script>
@@ -428,6 +432,16 @@
             });
         } else {
             //
+        }
+
+        console.log(document.getElementById("videograph").muted)
+
+        function unmuteVideo() {
+            const vid = document.getElementById("videograph");
+            vid.muted = false;
+            console.log(vid.muted)
+            const unmuter = document.getElementById("unmuter");
+            unmuter.style.display = "none";
         }
     </script>
 </body>
