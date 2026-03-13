@@ -177,7 +177,7 @@
         .slider {
             position: relative;
             width: 100%;
-            height: 100svh;
+            height: 80svh;
             overflow: hidden;
         }
 
@@ -193,6 +193,38 @@
             transform: translateX(-50%);
             font-weight: 500;
         }
+
+        .meet-section{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:black;
+}
+
+.meet-text{
+  font-size:10vw;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:0.05em;
+
+  color:transparent;
+  -webkit-text-stroke:2px #ffffff;
+
+  background:linear-gradient(
+    90deg,
+    #ffffff 0%,
+    #ff0000 100%
+  );
+  background-repeat:no-repeat;
+  background-size:0% 100%;
+  -webkit-background-clip:text;
+
+  text-shadow:
+    0 0 10px rgba(255,0,0,0.6),
+    0 0 20px rgba(255,0,0,0.4),
+    0 0 40px rgba(6, 6, 6, 0.25);
+}
     </style>
 </head>
 <body>
@@ -248,6 +280,10 @@
 </h1>
 
     </div>
+
+    <section class="meet-section">
+        <h1 class="meet-text">MEET THE TEAM</h1>
+    </section>
 
     <section class="slider">
         <p style="color: white;" id="slide-title">Slide Title</p>
@@ -336,11 +372,12 @@
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script>
 
-        const SLIDE_WIDTH = 200;
-        const SLIDE_HEIGHT = 275;
-        const SLIDE_GAP = 100;
+        const SLIDE_WIDTH = 250;
+        const SLIDE_HEIGHT = 343.75;
+        const SLIDE_GAP = 250;
         const SLIDE_COUNT = 24;
         const ARC_DEPTH = 200;
         const CENTER_LIFT = 100;
@@ -415,6 +452,7 @@
 
             const imgEl = document.createElement("img");
             imgEl.src = src;
+            imgEl.style.borderRadius = "50px";
             slideEl.appendChild(imgEl);
 
             sliderContainer.appendChild(slideEl);
@@ -529,6 +567,20 @@
             windowCenterX = windowWidth / 2;
             arcBaselineY = windowHeight * 0.4;
         });
+
+        gsap.registerPlugin(ScrollTrigger);
+
+gsap.to(".meet-text", {
+  backgroundSize: "100% 100%",
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".meet-section",
+    start: "top top",
+    end: "+=1200",
+    scrub: true,
+    pin: true
+  }
+});
     </script>
 </body>
 </html>
