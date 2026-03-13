@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "Untitled",
+			"path": "."
+		},
+		{
+			"name": "TEDx Photos",
+			"path": "../../Documents/TEDx Photos"
+		},
+		{
+			"name": "gsap-public",
+			"path": "../../../../opt/homebrew/lib/python3.13/site-packages/tedxpaceacademy.github.io/gsap-public"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Untitled"
+	}
+}

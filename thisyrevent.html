@@ -250,7 +250,7 @@
     </div>
 
     <section class="slider">
-        <p id="slide-title">Slide Title</p>
+        <p style="color: white;" id="slide-title">Slide Title</p>
     </section>
     
     <script>
@@ -335,20 +335,70 @@
             //
         }
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script>
-        import gsap from "gsap";
 
         const SLIDE_WIDTH = 200;
         const SLIDE_HEIGHT = 275;
         const SLIDE_GAP = 100;
-        const SLIDE_COUNT = 9;
+        const SLIDE_COUNT = 24;
         const ARC_DEPTH = 200;
         const CENTER_LIFT = 100;
         const SCROLL_LERP = 0.05;
 
-        const slideSources = 0; // to implement
+        const slideSources = [
+            "TEDx Photos/GOODAleksiU.png",
+            "TEDx Photos/GOODAndyL.png",
+            "TEDx Photos/GOODAsimG.png",
+            "TEDx Photos/GOODAvaG.png",
+            "TEDx Photos/GOODBayliR.png",
+            "TEDx Photos/GOODBodhiV.png",
+            "TEDx Photos/GOODEloiseM.png",
+            "TEDx Photos/GOODEmmaA.png",
+            "TEDx Photos/GOODGraydenA.png",
+            "TEDx Photos/GOODGusL.png",
+            "TEDx Photos/GOODHiruniM.png",
+            "TEDx Photos/GOODIsaacT.png",
+            "TEDx Photos/GOODJohnH.png",
+            "TEDx Photos/GOODJonSorenU.png",
+            "TEDx Photos/GOODKittyL.png",
+            "TEDx Photos/GOODLaneyM.png",
+            "TEDx Photos/GOODLibbyR.png",
+            "TEDx Photos/GOODMadelineG.png",
+            "TEDx Photos/GOODMasonP.png",
+            "TEDx Photos/GOODRando3.png",
+            "TEDx Photos/GOODRandomKid.png",
+            "TEDx Photos/GOODRandoP2.png",
+            "TEDx Photos/GOODRobertK.png",
+            "TEDx Photos/GOODRyanJ.png"
+        ];
 
-        const slideTitles = []; // to implement
+        const slideTitles = [
+            "Aleksi UyHam",
+            "Andy Levenson",
+            "Asim George",
+            "Ava Grant",
+            "Bayli Richardson",
+            "Bodhi Venturi",
+            "Eloise McDonald",
+            "Emma Alvarez",
+            "Grayden Auchincloss",
+            "Gus Loomis",
+            "Hiruni Manawadu",
+            "Isaac Tal",
+            "John Hardesty",
+            "Jon Soren UyHam",
+            "Kitty Lubin",
+            "Laney Morris",
+            "Libby Rowe",
+            "Madeleine Ganz",
+            "Mason Pinkerton",
+            "Madeline Siskin",
+            "Carson Curtin",
+            "Leela Desai",
+            "Robert Kaufman",
+            "Ryan Janki"
+        ];
 
         const sliderContainer = document.querySelector(".slider");
         const titleDisplay = document.getElementById("slide-title");
@@ -472,6 +522,13 @@
         }
 
         animate();
+
+        window.addEventListener("resize", () => {
+            windowWidth = window.innerWidth;
+            windowHeight = window.innerHeight;
+            windowCenterX = windowWidth / 2;
+            arcBaselineY = windowHeight * 0.4;
+        });
     </script>
 </body>
 </html>
